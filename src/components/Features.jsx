@@ -1,10 +1,19 @@
 // import React from 'react'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from "styled-components";
+const Services = styled.section`
+  padding: 30px;
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 const Features = () => {
   return (
     // <div>Features</div>
-    <>
-      <div className="card" style="width: 18rem;">
+    <Services>
+      <div className="card" style={{width: "18rem"}}>
         <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Reading Area</h5>
@@ -13,7 +22,7 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="card" style="width: 18rem;">
+      <div className="card" style={{width: "18rem"}}>
         <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Explore Games</h5>
@@ -22,7 +31,7 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="card" style="width: 18rem;">
+      <div className="card" style={{width: "18rem"}}>
         <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Chat Bot</h5>
@@ -30,7 +39,7 @@ const Features = () => {
           <a href="/" className="btn btn-primary">Chat Now</a>
         </div>
       </div>
-    </>
+    </Services>
   )
 }
 
