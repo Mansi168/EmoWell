@@ -1,15 +1,21 @@
 
-import Navbar from './components/Navbar'
-import './App.css'
-import Features from './components/Features'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from "./Pages/Home";
+// import Features from './components/Features'
 
 function App() {
 
 
   return (
     <>
-    <Navbar/>
-    <Features/>
+  <Router>
+    <Routes>
+    <Route path="/" element={<Home />} />
+    </Routes>
+    </Router>
+  
+    {/* <Features/> */}
     </>
   )
 }
