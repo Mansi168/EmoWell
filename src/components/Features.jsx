@@ -123,7 +123,7 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Chat Bot</h5>
             <p className="card-text">Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
-            <a href="/" className="btn btn-primary">Chat Now</a>
+            <a href="https://emowellbeing.streamlit.app/" className="btn btn-primary">Chat Now</a>
           </div>
         </div>
       </div>
