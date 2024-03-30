@@ -28,7 +28,7 @@ font-style: normal;
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 22px;
-background: #FDA5A4;
+background: #00dada;
 color: #000;
 border: none;
 border-radius: 14px;

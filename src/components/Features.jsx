@@ -114,7 +114,7 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Explore Games</h5>
             <p className="card-text">Experience the joy of play to relax and rejuvenate! Dive into our games for a refreshing escape.</p>
-            <a href="/" className="btn btn-primary">Play Now</a>
+            <a href="/forum" className="btn btn-primary">Play Now</a>
           </div>
         </div>
 

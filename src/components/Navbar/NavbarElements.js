@@ -171,7 +171,7 @@ align-items: center;
 ${'' /* justify-content: center; */}
 padding: 0px 20px;
 gap: 10px;
-border:0.5px solid #FAE4CD;
+border:0.5px solid #05f8cb;
 width:120px;
 height: 34px;
 border-radius: 22px;
@@ -182,7 +182,7 @@ flex: none;
 order: 0;
 flex-grow: 0;
 &:hover {
-  background: #FDA5A4;
+  background: #00dada;
   color: #000; 
 }
 
