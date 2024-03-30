@@ -1,7 +1,7 @@
 // import React from 'react'
-import img1 from "C:/Users/riyaj/OneDrive/Documents/Devcation/src/assets/img1.png";
-import img2 from "C:/Users/riyaj/OneDrive/Documents/Devcation/src/assets/image2.jpg";
-import img3 from "C:/Users/riyaj/OneDrive/Documents/Devcation/src/assets/img3.jpg"
+import img1 from "../assets/img1.png";
+import img2 from "../assets/image2.jpg";
+import img3 from "../assets/img3.jpg"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from "styled-components";
 const Services = styled.section`
