@@ -105,7 +105,7 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Reading Area</h5>
             <p className="card-text">Ready to unwind and let loose? Discover actionable mental health and wellbeing advice.</p>
-            <a href="/" className="btn btn-primary">Read Now</a>
+            <a href="/readingarea" className="btn btn-primary">Read Now</a>
           </div>
         </div>
 
@@ -131,7 +131,7 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Community Forum</h5>
             <p className="card-text">Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
-            <a href="https://emowellbeing.streamlit.app/" className="btn btn-primary">Chat Now</a>
+            <a href="/forum" className="btn btn-primary">Chat Now</a>
           </div>
         </div>
       </div>
