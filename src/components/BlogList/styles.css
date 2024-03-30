@@ -1,0 +1,46 @@
+.blogList-wrap {
+    margin:0 5vw 0 5vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .blogList-wrap .blogItem:nth-child(7n+1) {
+    background-color: #CC99C9;
+  }
+  
+  .blogList-wrap .blogItem:nth-child(7n+2) {
+    background-color: #9EC1CF;
+  }
+  
+  .blogList-wrap .blogItem:nth-child(7n+3) {
+    background-color: #9EE09E;
+  }
+  
+  .blogList-wrap .blogItem:nth-child(7n+4) {
+    background-color: #FDFD97;
+  }
+  
+  .blogList-wrap .blogItem:nth-child(7n+5) {
+    background-color: #FEB144;
+  }
+  
+  .blogList-wrap .blogItem:nth-child(7n+6) {
+    background-color: #FF6663;
+  }
+  
+  .blogList-wrap .blogItem:nth-child(7n+7) {
+    background-color: #9EC1CF;
+  }
+  
+  @media (max-width: 768px) {
+    .blogList-wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .blogList-wrap {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

@@ -217,6 +217,7 @@ section
     border-radius: 20px;
     color: #fff;
     border: none;
+    font-weight: 500;
     max-width: 150px;
     padding: 12px;
     padding: 12px 24px;
@@ -227,7 +228,8 @@ section
 }
 
 .contact-container .contactForm .formBox .inputBox input[type="submit"]:hover{
-    background: #ff6d6b;
+    background: #00dada;
+    color:black;
 }
 
 /* make the form responsive */
