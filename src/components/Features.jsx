@@ -1,4 +1,7 @@
 // import React from 'react'
+import img1 from "C:/Users/riyaj/OneDrive/Documents/Devcation/src/assets/img1.png";
+import img2 from "C:/Users/riyaj/OneDrive/Documents/Devcation/src/assets/image2.jpg";
+import img3 from "C:/Users/riyaj/OneDrive/Documents/Devcation/src/assets/img3.jpg"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from "styled-components";
 const Services = styled.section`
@@ -22,8 +25,7 @@ align-items: center;
 }
 .card{
   display: inline-block;
-  // height: 20rem;
-   margin-left:10rem;
+  margin-left:10rem;
   margin-top: 3rem;
   width: 280px;
   height: 360px;
@@ -34,11 +36,11 @@ align-items: center;
   box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
   transition; 0.5s ease-in-out;
 }
-.card:hover {
+.card:hover{
   transform: translateY(20px);
   cursor: pointer;
 }
-.card:before {
+.card:before{
   content: "";
   position: absolute;
   top: 0;
@@ -46,7 +48,7 @@ align-items: center;
   display: block:
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom , rgba(0,176,155,0.5), rgba(150,201,61,1));
+  background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
@@ -68,7 +70,7 @@ align-items: center;
 .card-body{
   position: relative;
   z-index: 3;
-  // color: #fff;
+   color: #fff;
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s all;
@@ -99,7 +101,7 @@ const Features = () => {
       <h2 className="heading">FEATURES</h2>
       <div className="wrapper">
         <div className="card" style={{ width: "18rem" }}>
-          <img src="..." className="card-img-top"  />
+          <img src={img1} className="card-img-top"  />
           <div className="card-body">
             <h5 className="card-title">Reading Area</h5>
             <p className="card-text">Ready to unwind and let loose? Discover actionable mental health and wellbeing advice.</p>
@@ -108,7 +110,7 @@ const Features = () => {
         </div>
 
         <div className="card" style={{ width: "18rem" }}>
-          <img src="..." className="card-img-top"  />
+          <img src={img2} className="card-img-top"  />
           <div className="card-body">
             <h5 className="card-title">Explore Games</h5>
             <p className="card-text">Experience the joy of play to relax and rejuvenate! Dive into our games for a refreshing escape.</p>
@@ -117,7 +119,7 @@ const Features = () => {
         </div>
 
         <div className="card" style={{ width: "18rem" }}>
-          <img src="..." className="card-img-top" alt="..." />
+          <img src={img3} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Chat Bot</h5>
             <p className="card-text">Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
