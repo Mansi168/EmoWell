@@ -121,3 +121,19 @@ input{
   text-transform: uppercase;
   padding: 18px 0 24px 0;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00dada; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #fff; 
+}

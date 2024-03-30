@@ -7,20 +7,19 @@ import styled from "styled-components";
 const Services = styled.section`
 padding: 30px;
 padding-bottom: 150px;
-diplay: flex;
+display: flex;
 justify-content: center;
 align-items: center;
 
 .heading{
-  font-size: 90px;
-  width:100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 42px;
+  color: #ff6d6b;
+  font-weight:700;
+  margin-bottom: 48px;
+  text-shadow: 1px 1px 1px rgb(43 57 74);
 }
 .wrapper{
-  disply: flex;
-  wisth: 70% ;
+  display: flex;
   justify-content: space-around ;
 }
 .card{
@@ -32,9 +31,9 @@ align-items: center;
   padding: 2rem 1rem;
   background: #fff;
   position: relative;
-  slign-items: flex-end;
+  align-items: flex-end;
   box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
-  transition; 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .card:hover{
   transform: translateY(20px);
@@ -45,7 +44,7 @@ align-items: center;
   position: absolute;
   top: 0;
   left:0;
-  display: block:
+  display: block;
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
@@ -82,10 +81,10 @@ align-items: center;
 }
 
 .card .card-body h5{
-         margin; 0;
+         margin: 0;
 }
 .card .card-body p{
-  Letter-spacing: 1px;
+  letter-spacing: 1px;
   font-size: 15px;
   margin-top: 8px;
   margin-bottom: 20px;
@@ -97,8 +96,9 @@ align-items: center;
 const Features = () => {
   return (
     // <div>Features</div>
-    <Services>
-      <h2 className="heading">FEATURES</h2>
+    <>
+    <h2 className="heading">FEATURES</h2>
+    <Services id="featureSection">
       <div className="wrapper">
         <div className="card" style={{ width: "18rem" }}>
           <img src={img1} className="card-img-top"  />
@@ -126,8 +126,17 @@ const Features = () => {
             <a href="https://emowellbeing.streamlit.app/" className="btn btn-primary">Chat Now</a>
           </div>
         </div>
+        <div className="card">
+          <img src={img3} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Community Forum</h5>
+            <p className="card-text">Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
+            <a href="https://emowellbeing.streamlit.app/" className="btn btn-primary">Chat Now</a>
+          </div>
+        </div>
       </div>
     </Services>
+    </>
   )
 }
 
