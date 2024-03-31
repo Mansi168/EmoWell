@@ -170,6 +170,7 @@ flex-direction: row;
 align-items: center;
 ${'' /* justify-content: center; */}
 padding: 0px 20px;
+padding-bottom: 7px;
 gap: 10px;
 border:0.5px solid #05f8cb;
 width:120px;
@@ -179,6 +180,7 @@ color: #fff;
 flex: none;
 order: 0;
 flex-grow: 0;
+text-decoration: none;
 &:hover {
   background: rgb(48, 175, 91);
   color: #fff;
@@ -187,6 +189,7 @@ flex-grow: 0;
 &.custom {
   padding-left: 10px; 
   padding-right: 10px; 
+  padding-bottom: 7px;
 }
 `
 
@@ -228,5 +231,6 @@ export const NavLinks = styled(LinkR)`
 
   &:hover {
     color: #000;
+    text-decoration: none;
   }
 `;
