@@ -39,7 +39,7 @@ function Card(props) {
             <div className="layer">
                 <h2>{props.head}</h2>
                 <p>{props.content}</p>
-                <Button style={buttonStyles} onClick={redirect}>Register Now</Button>
+                <Button style={buttonStyles} onClick={redirect}>Play Now</Button>
             </div>
             <div className="event-info">
                 <p>{props.event}</p> {/* Display event information */}
