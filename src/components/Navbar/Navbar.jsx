@@ -37,7 +37,7 @@ cursor: pointer;
 &:hover {
   background: #2B394A;
   color:#fff;
-  text-decoration:underline;
+  text-decoration : none;
 }
 `;
 const Navbar = () => {
