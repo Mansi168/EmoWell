@@ -336,7 +336,7 @@ const FeaturesSection = () => {
             <p> Engage in a lively chat with our friendly bot for a fun and
                  helpful interaction!</p>
                  {isAuthenticated ? (
-                <Link to="./forum" target="_blank">
+                <Link to="./forum">
                   <Button>Learn More</Button>
                 </Link>
               ) : (
