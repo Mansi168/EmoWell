@@ -3,7 +3,25 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/image2.jpg";
 import img3 from "../assets/img3.jpg"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+const Button = styled.button`
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight:20px;
+  background: #2B394A;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #00dada;
+    color:black;
+    font-weight:20px;
+  }
+`;
 const Services = styled.section`
 padding: 30px;
 padding-bottom: 150px;
@@ -94,6 +112,7 @@ align-items: center;
 }
 `;
 const Features = () => {
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
     // <div>Features</div>
     <>
@@ -105,7 +124,9 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Reading Area</h5>
             <p className="card-text">Ready to unwind and let loose? Discover actionable mental health and wellbeing advice.</p>
-            <a href="/readingarea" className="btn btn-primary">Read Now</a>
+            <Link to="/readingarea" target="_blank">
+              <Button>Read Now</Button>
+            </Link>
           </div>
         </div>
 
@@ -114,7 +135,9 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Explore Games</h5>
             <p className="card-text">Experience the joy of play to relax and rejuvenate! Dive into our games for a refreshing escape.</p>
-            <a href="/forum" className="btn btn-primary">Play Now</a>
+            <Link to="/" target="_blank">
+              <Button>Play Now</Button>
+            </Link>
           </div>
         </div>
 
@@ -123,7 +146,10 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Chat Bot</h5>
             <p className="card-text">Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
-            <a href="https://emowellbeing.streamlit.app/" className="btn btn-primary">Chat Now</a>
+            <Link to="https://emowellbeing.streamlit.app/" target="_blank">
+              <Button>Chat Now</Button>
+            </Link>
+            {/* <a href="https://emowellbeing.streamlit.app/" className="btn btn-primary">Chat Now</a> */}
           </div>
         </div>
         <div className="card">
@@ -131,7 +157,13 @@ const Features = () => {
           <div className="card-body">
             <h5 className="card-title">Community Forum</h5>
             <p className="card-text">Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
-            <a href="/forum" className="btn btn-primary">Chat Now</a>
+            {isAuthenticated ?(
+              <Link to="./forum" target="_blank">
+              <Button>Learn More</Button>
+            </Link>
+          ):(
+            <Button onClick={() => loginWithRedirect()}>Learn More</Button>
+          )}
           </div>
         </div>
       </div>

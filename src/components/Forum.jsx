@@ -4,8 +4,8 @@ import { ChatEngine } from 'react-chat-engine';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
-const api_key = import.meta.env.VITE_PROJECT;
-const project_id = import.meta.env.VITE_KEY;
+const api_key = import.meta.env.VITE_KEY;
+const project_id = import.meta.env.VITE_PROJECT;
 
 const ChatComponent = () => {
   const { user } = useAuth0();
@@ -31,7 +31,7 @@ const ChatComponent = () => {
           return;
         }
 
-        const chatID = 213284;
+        const chatID = 240613;
 
         // Add the user to the chat
         const addMemberResponse = await fetch(`https://api.chatengine.io/chats/${chatID}/people/`, {
