@@ -38,7 +38,7 @@
     align-items: center;
     transform: translateY(-400px);
     visibility: hidden;
-    background-color: #080e68;
+    background-color: rgb(48, 175, 91);
     transition: 1s;
     /* align-items: center;
     justify-content: center; */
