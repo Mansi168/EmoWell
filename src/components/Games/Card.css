@@ -1,6 +1,6 @@
 
 .cardproject{
-    width: 370px;
+    width: 350px;
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -55,7 +55,7 @@
 
 }
 .layer h2{
-    width: 370px;
+    width: 350px;
     text-align: center;
     font-size: 2.2rem;
     display: block;
@@ -63,7 +63,7 @@
     font-weight: 900;
 }
 .layer p{
-    width: 350px;
+    padding: 0 20px;
 font-size: 1.2rem;
 margin-top: 0.5rem;
 font-weight: 700;

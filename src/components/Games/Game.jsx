@@ -1,16 +1,16 @@
 import Card from "./Card";
 import "./Game.css";
-import filter from "/Filter.png";
-import doodle from "/Doodlecraft.png";
-import techscribe from "/Techscribe.png";
-import gemini from "/Gemini.png";
-import hacknsolve from "/Hacknsolve.png";
+import filter from "../../assets/img1.png";
+import doodle from "../../assets/img1.png";
+import techscribe from "../../assets/img1.png";
+import gemini from "../../assets/img1.png";
+import hacknsolve from "../../assets/img1.png";
 
 const Game = () => 
 {
     return(
         <>
-        <h1 className="skill-head" id="event">Events DEVCATION 24</h1>
+        <h1 className="skill-head" id="event">Explore Games</h1>
         {/* <h4 className="skill-subhead">tentative dates for all are 21st March to 30th March</h4> */}
         
         <div className="project-container">
