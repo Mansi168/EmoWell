@@ -190,8 +190,9 @@ import img3 from "../assets/img-3.png";
 
 // export default Features;
 
-
+import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 // Styled components for section, h2, p, img, and anchor elements
 const Section = styled.section`
@@ -280,6 +281,7 @@ const ButtonLink = styled.a`
 
 // Replace the original JSX with styled components
 const FeaturesSection = () => {
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
     <Section>
       <Title> Our Features</Title>
@@ -295,7 +297,7 @@ const FeaturesSection = () => {
             <p>Ready to unwind and let loose? Discover actionable mental health
                  and wellbeing advice.</p>
             <Button>
-              <ButtonLink href="./readingArea">Read Now</ButtonLink>
+              <ButtonLink href="./readingArea" target="_blank">Read Now</ButtonLink>
             </Button>
           </DecorationData>
           {/* Repeat the same pattern for other elements */}
@@ -308,7 +310,7 @@ const FeaturesSection = () => {
             <p>Experience the joy of play to relax and rejuvenate! Dive into
                  our games for a refreshing escape.</p>
             <Button>
-              <ButtonLink href="/games">Play Now</ButtonLink>
+              <ButtonLink href="/games" target="_blank">Play Now</ButtonLink>
             </Button>
           </DecorationData>
 
@@ -321,7 +323,7 @@ const FeaturesSection = () => {
             <p>Engage in a lively chat with our friendly bot for a fun and
                  helpful interaction!</p>
             <Button>
-              <ButtonLink href="https://emowellbeing.streamlit.app/">Chat Now</ButtonLink>
+              <ButtonLink href="https://emowellbeing.streamlit.app/" target="_blank">Chat Now</ButtonLink>
             </Button>
           </DecorationData>
 
@@ -333,9 +335,13 @@ const FeaturesSection = () => {
             <DecorationTitle>Community Forum</DecorationTitle>
             <p> Engage in a lively chat with our friendly bot for a fun and
                  helpful interaction!</p>
-            <Button>
-              <ButtonLink href="./forum">Try Here</ButtonLink>
-            </Button>
+                 {isAuthenticated ? (
+                <Link to="./forum">
+                  <Button>Learn More</Button>
+                </Link>
+              ) : (
+                <Button onClick={() => loginWithRedirect()}>Learn More</Button>
+              )}
           </DecorationData>
 
         </DecorationContainer>

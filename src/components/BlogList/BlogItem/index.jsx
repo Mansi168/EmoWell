@@ -10,7 +10,6 @@ const BlogItem = ({
     title,
     cover,
     category,
-    id,
     backgroundColor,
   },
 }) => {
@@ -21,7 +20,7 @@ const BlogItem = ({
       <h3>{title}</h3>
       <p className='blogItem-desc'>{description}</p>
       <footer>
-        <Link className='blogItem-link' to={`/blog/${id}`}>
+        <Link className='blogItem-link' to='https://psychcentral.com/health/life-feels-meaningless'>
          Read Here
         </Link>
       </footer>
