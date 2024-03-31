@@ -190,8 +190,9 @@ import img3 from "../assets/img-3.png";
 
 // export default Features;
 
-
+import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 // Styled components for section, h2, p, img, and anchor elements
 const Section = styled.section`
@@ -280,6 +281,7 @@ const ButtonLink = styled.a`
 
 // Replace the original JSX with styled components
 const FeaturesSection = () => {
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
     <Section>
       <Title> Our Features</Title>
@@ -333,9 +335,13 @@ const FeaturesSection = () => {
             <DecorationTitle>Community Forum</DecorationTitle>
             <p> Engage in a lively chat with our friendly bot for a fun and
                  helpful interaction!</p>
-            <Button>
-              <ButtonLink href="./forum">Try Here</ButtonLink>
-            </Button>
+                 {isAuthenticated ? (
+                <Link to="./forum" target="_blank">
+                  <Button>Learn More</Button>
+                </Link>
+              ) : (
+                <Button onClick={() => loginWithRedirect()}>Learn More</Button>
+              )}
           </DecorationData>
 
         </DecorationContainer>
