@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar/Navbar';
 import HeroSection from '../components/HeroSection/hero';
 import Features from '../components/Features';
+import Footer from '../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <Navbar/> 
         <HeroSection />
         <Features /> 
+        <Footer />
     </>
   )
 }
