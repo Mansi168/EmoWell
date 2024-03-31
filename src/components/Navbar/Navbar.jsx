@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useAuth0 } from "@auth0/auth0-react";
-// import logo from "../../../images/logo.png";
+import logo from "../../assets/logo.png";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -28,8 +28,8 @@ font-style: normal;
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 22px;
-background: #00dada;
-color: #000;
+background: rgb(48, 175, 91);
+color: #fff;
 border: none;
 border-radius: 14px;
 cursor: pointer;
@@ -95,13 +95,12 @@ const Navbar = () => {
       </Link>
     </NavImg> */}
     <NavImg>
-              {/* <img src={logo}
+              <img src={logo}
                 alt="favicon"
-                width="56"
                 height="60"
-              /> */}
-              <NavLogo to="/"  onClick={handleLogoClick}> Name
-              <SubLogo>Your Journey, Our Priority</SubLogo>
+              />
+              <NavLogo to="/"  onClick={handleLogoClick}> EmoWell
+              <SubLogo>EMBRACE Wellness</SubLogo>
               </NavLogo>
               
             </NavImg>

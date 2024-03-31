@@ -176,14 +176,12 @@ width:120px;
 height: 34px;
 border-radius: 22px;
 color: #fff;
-/* Inside auto layout */
-
 flex: none;
 order: 0;
 flex-grow: 0;
 &:hover {
-  background: #00dada;
-  color: #000; 
+  background: rgb(48, 175, 91);
+  color: #fff;
 }
 
 &.custom {
