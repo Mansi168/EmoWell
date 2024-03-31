@@ -115,6 +115,65 @@ input{
   margin: 0 auto;
   padding: 0 2rem;
 }
+.team_data {
+  justify-self: center;
+  width: 220px;
+}
+.decoration__data {
+  background-color: #fff;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px #410b1026;
+  padding: 1rem 1rem 2rem;
+  text-align: center;
+}
+.team-grid {
+  grid-gap: 1rem;
+  display: grid;
+  gap: 1rem;
+  margin: auto;
+}
+#team_render{
+  height: 200px;
+  width: 200px;
+  align-self: center;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1.3rem;
+}
+.decoration__container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.decoration__data:hover {
+  box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
+}
+
+.decoration__img {
+  width: 180px;
+}
+.bd-container {
+  margin-left: 1.5rem;
+  margin-left: 20px;
+  margin-right: 1.5rem;
+  margin-right: var(--mb-3);
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  box-sizing: border-box;
+  display:block !important;
+  padding: 4rem 0 2rem;
+}
+.section-title,
+.section-title-center {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.decoration__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
 
 /* section title */
 .section-title h2{
@@ -127,7 +186,7 @@ input{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #00dada; 
+  background-color: rgb(48, 175, 91); 
   border-radius: 6px;
 }
 

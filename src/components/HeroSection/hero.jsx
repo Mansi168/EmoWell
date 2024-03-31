@@ -72,9 +72,9 @@ const HeroSection = () => {
               >
               <HeroH1
                  style={{color: '#164863',fontFamily:'cursive'}}
-              >CELEBRATE YOURSELF</HeroH1>
+              >Wellness Begins Within</HeroH1>
                 <Typography variant="h1" color="#ffffe6" sx={customH1Styles} >
-                  STAND PROUD
+                Healthy Minds, Happy Lives
                 </Typography>
                 <HeroP>
                   We strive to create a community where every voice is heard, respected and celebrated.

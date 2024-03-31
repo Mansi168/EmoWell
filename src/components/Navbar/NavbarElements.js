@@ -126,7 +126,7 @@ export const Dropdown=styled.div`
 /* overflow:hidden; */
 font-weight: 600;
 &:hover{
-  background-color: #FDA5A4;
+  background-color: rgb(85 253 142);
   /* border-radius:10px; */
 }
 `;
@@ -183,7 +183,7 @@ flex-grow: 0;
 text-decoration: none;
 &:hover {
   background: rgb(48, 175, 91);
-  color: #fff;
+  color: white;
 }
 
 &.custom {
@@ -230,7 +230,6 @@ export const NavLinks = styled(LinkR)`
   }
 
   &:hover {
-    color: #000;
-    text-decoration: none;
+    color: #fff;
   }
 `;
