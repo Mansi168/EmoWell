@@ -295,7 +295,7 @@ const FeaturesSection = () => {
             <p>Ready to unwind and let loose? Discover actionable mental health
                  and wellbeing advice.</p>
             <Button>
-              <ButtonLink href="./readingArea">Read Now</ButtonLink>
+              <ButtonLink href="./readingArea" target="_blank">Read Now</ButtonLink>
             </Button>
           </DecorationData>
           {/* Repeat the same pattern for other elements */}
@@ -308,7 +308,7 @@ const FeaturesSection = () => {
             <p>Experience the joy of play to relax and rejuvenate! Dive into
                  our games for a refreshing escape.</p>
             <Button>
-              <ButtonLink href="/games">Play Now</ButtonLink>
+              <ButtonLink href="/games" target="_blank">Play Now</ButtonLink>
             </Button>
           </DecorationData>
 
@@ -321,7 +321,7 @@ const FeaturesSection = () => {
             <p>Engage in a lively chat with our friendly bot for a fun and
                  helpful interaction!</p>
             <Button>
-              <ButtonLink href="https://emowellbeing.streamlit.app/">Chat Now</ButtonLink>
+              <ButtonLink href="https://emowellbeing.streamlit.app/" target="_blank">Chat Now</ButtonLink>
             </Button>
           </DecorationData>
 
