@@ -8,7 +8,7 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: left;
     text-align: left; /* Adjusted to align text to the left */
-    height: 100vh;
+    height: 120vh;
     position: relative;
     overflow: hidden;
 

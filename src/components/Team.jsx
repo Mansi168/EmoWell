@@ -10,9 +10,9 @@ const Title = styled.h2`
 `;
 const Team = () => {
   return (
-    <section className="decoration section bd-container" style={{marginLeft:"200px"}} id="team">
+    <section className="decoration section bd-container items-center justify-center" style={{marginLeft:"150px"}} id="team">
           <Title>Our Team</Title>
-          <div className="decoration__container bd-grid team-grid">
+          <div className="decoration__container bd-grid team-grid items-center">
             <div className="decoration__data team_data">
               <img src={contributor} alt="" className="decoration__img" id="team_render" />
               <h3 className="decoration__title">Aanaya Jain</h3>

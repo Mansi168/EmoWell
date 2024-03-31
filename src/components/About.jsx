@@ -114,7 +114,7 @@ const CampContent = () => {
     <Container>
     <CampsContainer className="hide-scrollbar">
       <CampSite 
-        backgroundImage="/11098.jpg"
+        backgroundImage="/aboutimg.jpg"
         title="Putuk Truno Camp"
         subtitle="Prigen, Pasuruan"
         peopleJoined="50+ Joined"
@@ -130,7 +130,7 @@ const CampContent = () => {
           <strong>Feeling Lost</strong> And Not Knowing The Way?
         </Title>
         <Paragraph>
-          Starting from the anxiety of the climbers when visiting a new climbing location, the possibility of getting lost is very large. That's why we are here for those of you who want to start an adventure
+        Our platform is designed to provide you with the tools and resources you need to prioritize your emotional health. Whether you're looking for a chatbot to talk about your mental health, engaging activities to lift your mood, or a supportive community to connect with, Emowell has you covered.
         </Paragraph>
       </GreenBox>
     </CampsContainer>
