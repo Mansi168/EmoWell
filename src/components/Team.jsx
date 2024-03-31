@@ -1,9 +1,17 @@
 
 import contributor from "../assets/contributor.jpeg";
+import styled from 'styled-components';
+const Title = styled.h2`
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 2rem;
+`;
 const Team = () => {
   return (
-    <section className="decoration section bd-container" id="team">
-          <h2 className="section-title">Our Team</h2>
+    <section className="decoration section bd-container" style={{marginLeft:"200px"}} id="team">
+          <Title>Our Team</Title>
           <div className="decoration__container bd-grid team-grid">
             <div className="decoration__data team_data">
               <img src={contributor} alt="" className="decoration__img" id="team_render" />
