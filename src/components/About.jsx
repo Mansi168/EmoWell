@@ -1,7 +1,6 @@
-import React from 'react'
 
 import styled from 'styled-components';
-
+import stress from "../assets/stress.jpg"
 // Define styled components
 const Container = styled.div`
   display: flex;
@@ -68,7 +67,7 @@ const Paragraph = styled.p`
     font-size: 16px;
   }
 `;
-const CampsContainer = styled.div`
+const AboutContainer = styled.div`
 // overflow-x: auto;
 display: flex;
 justify-content: center;
@@ -112,12 +111,10 @@ const FlexContainer = styled.div`
 const CampContent = () => {
   return (
     <Container>
-    <CampsContainer className="hide-scrollbar">
+    <AboutContainer className="hide-scrollbar">
       <CampSite 
-        backgroundImage="/aboutimg.jpg"
-        title="Putuk Truno Camp"
-        subtitle="Prigen, Pasuruan"
-        peopleJoined="50+ Joined"
+        backgroundImage={stress}
+        title="About Us"
       />
       {/* <CampSite 
         backgroundImage="img-1.png"
@@ -133,7 +130,7 @@ const CampContent = () => {
         Our platform is designed to provide you with the tools and resources you need to prioritize your emotional health. Whether you're looking for a chatbot to talk about your mental health, engaging activities to lift your mood, or a supportive community to connect with, Emowell has you covered.
         </Paragraph>
       </GreenBox>
-    </CampsContainer>
+    </AboutContainer>
     {/* <FlexEndContainer> */}
       
     {/* </FlexEndContainer> */}
