@@ -106,7 +106,7 @@ const FeaturesSection = () => {
             <DecorationTitle>Explore Games</DecorationTitle>
             <p>Experience the joy of play to relax and rejuvenate! Dive into
                  our games for a refreshing escape.</p>
-              <Link to="./games" target="_blank">
+              <Link to="./games">
                   <Button>Play Now</Button>
                 </Link>
           </DecorationData>
