@@ -94,7 +94,7 @@ const FeaturesSection = () => {
             <p>Ready to unwind and let loose? Discover actionable mental health
                  and wellbeing advice.</p>
 
-              <Link to="./readingarea" target="_blank">
+              <Link to="/readingarea">
                   <Button>Read Now</Button>
                 </Link>
           </DecorationData>
