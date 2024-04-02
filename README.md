@@ -22,7 +22,8 @@ Emowell is a web application aimed at enhancing emotional wellbeing by providing
 3. **Reading Area**
    - Access a curated collection of resources related to mental health and emotional wellbeing.
    - Find articles, guides, and tips for maintaining good mental health.
-     ![image](https://github.com/MonalikaPatnaik/Devcation/assets/99342612/4c80940d-9b50-42f6-8055-c172ea57ebd6)
+    ![image](https://github.com/MonalikaPatnaik/Devcation/assets/99353300/871de3f2-b2c1-49d1-916c-fbfaa5322d42)
+
 
 
 4. **Community Forum**
@@ -30,12 +31,12 @@ Emowell is a web application aimed at enhancing emotional wellbeing by providing
    - Share experiences, ask questions, and provide support to others in the community.
 
 ## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript, React.js
-- **Backend**: Node.js, Express.js
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript, Vite, React.js
+- **Backend**: Node.js
 - **Database**: MongoDB
-- **Chatbot Integration**: Dialogflow, API.ai
+- **Chatbot Integration**: Dialogflow, API.ai, Streamlit
 - **Version Control**: Git, GitHub
-
+- **Authentication**: Auth0
 ## Getting Started
 To run the Emowell application locally, follow these steps:
 
