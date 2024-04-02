@@ -94,7 +94,7 @@ const FeaturesSection = () => {
             <p>Ready to unwind and let loose? Discover actionable mental health
                  and wellbeing advice.</p>
 
-              <Link to="/readingarea" target="_blank">
+              <Link to="./readingarea" target="_blank">
                   <Button>Read Now</Button>
                 </Link>
           </DecorationData>
@@ -106,7 +106,7 @@ const FeaturesSection = () => {
             <DecorationTitle>Explore Games</DecorationTitle>
             <p>Experience the joy of play to relax and rejuvenate! Dive into
                  our games for a refreshing escape.</p>
-              <Link to="/games" target="_blank">
+              <Link to="./games" target="_blank">
                   <Button>Play Now</Button>
                 </Link>
           </DecorationData>
