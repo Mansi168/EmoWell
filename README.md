@@ -94,28 +94,18 @@ Fork the repository.
 ### Step 2: 
 Clone the forked repository on your local machine.
 ```
-git clone https://github.com/<your_github_username>/UMatter.git
+git clone https://github.com/<your_github_username>/EmoWell.git
 ```
 ### Step 3:
 Open command prompt/Terminal.
+
 ### Step 4:
-In the terminal run:
+Shoot up a terminal and run:
 ```
-cd UMatter
-```
-```
-cd Express_Js_Server
+cd EmoWell
 ```
 ```
-node index.js
-```
-### Step 5:
-Shoot up a new terminal and run:
-```
-cd UMatter
-```
-```
-npm start
+npm run dev
 ```
 
 This will open up the website on localhost. You can begin working. The changes will be reflected here.
