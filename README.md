@@ -86,7 +86,7 @@ Welcome to Emowell, your comprehensive hub for enhancing emotional wellbeing and
 # 🔖Steps to Contribute ✅
  
 - Contribution is the best way to support and get involved in the community!
- - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
+ - Contributions to `EmoWell` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
    <br>
 ### Get started on the local machine
 ### Step 1: 
