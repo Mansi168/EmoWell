@@ -117,7 +117,6 @@ input{
 }
 .team_data {
   justify-self: center;
-  width: 220px;
 }
 .decoration__data {
   background-color: #fff;
@@ -134,8 +133,8 @@ input{
   margin: auto;
 }
 #team_render{
-  height: 200px;
-  width: 200px;
+  height: 290px;
+  width: 100%;
   align-self: center;
   object-fit: cover;
   border-radius: 5px;
@@ -152,15 +151,12 @@ input{
   width: 180px;
 }
 .bd-container {
-  margin-left: 1.5rem;
-  margin-left: 20px;
-  margin-right: 1.5rem;
-  margin-right: var(--mb-3);
-  max-width: 968px;
-  width: calc(100% - 3rem);
-  box-sizing: border-box;
-  display:block !important;
-  padding: 4rem 0 2rem;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto;
 }
 .section-title,
 .section-title-center {

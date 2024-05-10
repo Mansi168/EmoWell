@@ -4,13 +4,13 @@ import { Link as LinkR } from 'react-router-dom'
 
 export const Nav = styled.nav`
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-display: flex;
+/* display: flex;
 justify-content: center;
-align-items: center;
-width: 100%;
+align-items: center; */
+/* width: 100%; */
 top: 0px;
 position: sticky; 
-height: 80px;
+/* height: 80px; */
 top: 0;
 z-index: 19;
   /* overflow-x: auto; */
@@ -30,7 +30,7 @@ z-index: 19;
 `
 
 export const NavbarContainer = styled.div`
-display: flex;
+/* display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 0px;
@@ -42,6 +42,15 @@ height: auto;
 flex: none;
 order: 1;
 flex-grow: 0;
+gap:61px; */
+max-width: 1024px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0px;
 @media screen and (max-width: 480px){
   width: auto;
   height: auto;
@@ -83,7 +92,6 @@ export const NavMenu = styled.ul`
 display: flex;
 flex-direction: row;
 align-items: center;
-padding: 16px 50px 0px 90px;
 gap: 21px;
 width: auto;
 height: 45px;
@@ -94,7 +102,7 @@ height: 45px;
 flex: none;
 order: 1;
 flex-grow: 0;
-
+padding-top: 19px;
   @media screen and  (max-width: 768px){
     display: flex;
     flex-direction: column;
@@ -102,9 +110,9 @@ flex-grow: 0;
     justify-content: center;
     padding: 0;
     width: 100%;
-    height: 41vh; 
+    height: 70vh; 
     position: absolute;
-    top: ${({ isOpen }) => (isOpen ? '80px' : '-41vh')};
+    top: ${({ isOpen }) => (isOpen ? '18vh' : '-70vh')};
     left: 0;
     transition: 0.3s ease-in-out;
     background-color: #2B394A;
@@ -197,12 +205,6 @@ export const NavImg = styled.div`
 display: flex;
 align-items: flex-start;
 flex-direction: row;
-padding-left: 40px;
-margin-right: auto; /* Pushes the container to the left */
-${'' /* margin-bottom: 20px; */}
-flex: none;
-order: 0;
-flex-grow: 0;
 `;
 
 

@@ -39,6 +39,12 @@ const GreenBox = styled.div`
     border-radius: 30px;
     padding: 28px;
   }
+  @media (max-width: 1023px)
+  {
+    width: 100%;
+    margin-bottom: 190px;
+    padding: 30px;
+  }
 `;
 
 const Title = styled.h2`
@@ -82,6 +88,9 @@ height: 140px;
 
 @media (min-width: 1280px) { /* xl breakpoint */
   height: 640px;
+}
+@media (max-width: 768px) { /* xl breakpoint */
+flex-direction: row-reverse;
 }
 `;
 

@@ -10,6 +10,12 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 767px) { /* lg breakpoint */
+  padding: 10rem 0 2rem;
+}
+
+
 `;
 
 const Title = styled.h2`
@@ -25,17 +31,17 @@ const Container = styled.div`
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  display: block;
 `;
 
 const DecorationContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
 gap: 2rem;
 justify-content: center;
+max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 `;
 
 const DecorationData = styled.div`
@@ -44,14 +50,14 @@ padding: 1rem 1rem 2rem;
 background-color: var(--container-color);
 box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
 border-radius: 1rem;
-width: calc(25% - 1rem);
-max-width: 220px;
+width: 100%;
+max-width: 100%;
 flex: 1 0 auto;
 box-sizing: border-box;
 `;
 
 const DecorationImg = styled.img`
-  width: 180px;
+  width: 100%;
 `;
 
 const DecorationTitle = styled.h3`

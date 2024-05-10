@@ -33,7 +33,7 @@ export const FooterLinksWrapper = styled.div`
   @media (max-width: 786px) {
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
