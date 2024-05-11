@@ -105,6 +105,9 @@ Shoot up a terminal and run:
 cd EmoWell
 ```
 ```
+npm install 
+```
+```
 npm run dev
 ```
 
