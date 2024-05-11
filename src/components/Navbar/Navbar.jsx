@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import the close icon as well
 import {
   Nav,
@@ -11,7 +11,7 @@ import {
   NavLogo,
   SubLogo,
   Dropdown,
-  Dropdowncontent,ButtonDropdown,
+  Dropdowncontent, ButtonDropdown,
 } from "./NavbarElements";
 
 // import Dropdown from 'rsuite/Dropdown'; 
@@ -23,26 +23,28 @@ import logo from "../../assets/logo.png";
 import styled from "styled-components";
 
 const Button = styled.button`
-padding: 12px 24px;
-font-style: normal;
+  padding: 12px 24px;
+  font-style: normal;
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 22px;
-background: rgb(48, 175, 91);
-color: #fff;
-border: none;
-border-radius: 14px;
-cursor: pointer;
+  background: rgb(48, 175, 91);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
 
-&:hover {
-  background: #2B394A;
-  color:#fff;
-  text-decoration : none;
-}
+  &:hover {
+    background: #2b394a;
+    border: 2px solid rgb(48, 175, 91); /* Add border on hover */
+    color: #fff;
+    text-decoration: none;
+  }
 `;
+
 const Navbar = () => {
-  const [ setIsActive] = useState(false);
-  const { loginWithRedirect, isAuthenticated,logout } = useAuth0();
+  const [setIsActive] = useState(false);
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -85,7 +87,7 @@ const Navbar = () => {
         }}
       >
         <NavbarContainer>
-        {/* <NavImg>
+          {/* <NavImg>
       <Link to="/" onClick={handleLogoClick}>
         <img src={logo} height={56} alt="Logo" />
         <NavLogo>
@@ -94,16 +96,16 @@ const Navbar = () => {
         </NavLogo>
       </Link>
     </NavImg> */}
-    <NavImg>
-              <img src={logo}
-                alt="favicon"
-                height="60"
-              />
-              <NavLogo to="/"  onClick={handleLogoClick}> EmoWell
+          <NavImg>
+            <img src={logo}
+              alt="favicon"
+              height="60"
+            />
+            <NavLogo to="/" onClick={handleLogoClick}> EmoWell
               <SubLogo>EMBRACE Wellness</SubLogo>
-              </NavLogo>
-              
-            </NavImg>
+            </NavLogo>
+
+          </NavImg>
 
           <MobileIcon onClick={toggle}>
             {isOpen ? <FaTimes /> : <FaBars />} {/* Close icon when open */}
@@ -115,46 +117,46 @@ const Navbar = () => {
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks onClick={()=> scrollToSection('about')}>
-               About
+              <NavLinks onClick={() => scrollToSection('about')}>
+                About
               </NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="/contact" onClick={handleLogoClick}>
-               Contact
+                Contact
               </NavLinks>
             </Navitem>
 
             <Navitem className="custom">
-              <NavLinks onClick={()=> scrollToSection('featureSection')}>
+              <NavLinks onClick={() => scrollToSection('featureSection')}>
                 Features
               </NavLinks>
             </Navitem>
             {isAuthenticated ? (
-               <li>
-   <Dropdown>
-   <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }}/>
-    <ButtonDropdown onClick={toggleDropdown}>Account
-    <FontAwesomeIcon icon={faCaretDown}  style={{ color: '#fff' }} />
-    </ButtonDropdown>
-    {isOpen && (
-    <Dropdowncontent>
-      <a href="/profile">User Profile</a>
-      <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}style={{
-        fontSize:'16px', fontWeight: '600'
-      }}>
-     Log Out
-   </button>
-    </Dropdowncontent>
-    )}
-  </Dropdown>
+              <li>
+                <Dropdown>
+                  <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
+                  <ButtonDropdown onClick={toggleDropdown}>Account
+                    <FontAwesomeIcon icon={faCaretDown} style={{ color: '#fff' }} />
+                  </ButtonDropdown>
+                  {isOpen && (
+                    <Dropdowncontent>
+                      <a href="/profile">User Profile</a>
+                      <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} style={{
+                        fontSize: '16px', fontWeight: '600'
+                      }}>
+                        Log Out
+                      </button>
+                    </Dropdowncontent>
+                  )}
+                </Dropdown>
 
-             </li>
-              ):(
-            <li>
-              <Button onClick={() => loginWithRedirect()}>
-              Register</Button>
-            </li>
+              </li>
+            ) : (
+              <li>
+                <Button onClick={() => loginWithRedirect()}>
+                  Register</Button>
+              </li>
             )}
           </NavMenu>
         </NavbarContainer>
