@@ -42,7 +42,7 @@ button{
   cursor: pointer;
 }
 img{
-  height: 250px;;
+  width: 100%;
   display: block;
 }
 input{

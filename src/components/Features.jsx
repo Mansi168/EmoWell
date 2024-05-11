@@ -51,7 +51,7 @@ box-sizing: border-box;
 `;
 
 const DecorationImg = styled.img`
-  width: 180px;
+  height : 250px;
 `;
 
 const DecorationTitle = styled.h3`
