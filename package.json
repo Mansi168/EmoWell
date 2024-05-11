@@ -31,6 +31,7 @@
     "react-router": "^6.22.3",
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
+    "react-toastify": "^10.0.5",
     "requirejs": "^2.3.6",
     "styled-components": "^6.1.8",
     "websocket": "^1.0.34"

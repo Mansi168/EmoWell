@@ -198,7 +198,8 @@ section
 .contact-container .contactForm .formBox .inputBox input:focus ~ span,
 .contact-container .contactForm .formBox .inputBox input:valid ~ span,
 .contact-container .contactForm .formBox .inputBox textarea:focus ~ span, 
-.contact-container .contactForm .formBox .inputBox textarea:valid ~ span
+.contact-container .contactForm .formBox .inputBox textarea:valid ~ span,
+.contact-container .contactForm .formBox .inputBox.w50 input[type="email"]:not(:placeholder-shown) ~ span 
 {
     transform: translateY(-20px);
     font-size:  12px;
