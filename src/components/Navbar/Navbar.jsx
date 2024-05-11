@@ -153,7 +153,7 @@ const Navbar = () => {
              </li>
               ):(
             <li>
-              <Button onClick={() => loginWithRedirect()} className="registerbutton">
+              <Button onClick={() => loginWithRedirect()}>
               Register</Button>
             </li>
             )}
