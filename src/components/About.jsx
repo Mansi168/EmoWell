@@ -110,7 +110,7 @@ const FlexContainer = styled.div`
 // Convert the code
 const CampContent = () => {
   return (
-    <Container>
+    <Container id="about">
     <AboutContainer className="hide-scrollbar">
       <CampSite 
         backgroundImage={stress}

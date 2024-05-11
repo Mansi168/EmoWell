@@ -81,7 +81,7 @@ const Button = styled.div`
 const FeaturesSection = () => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
-    <Section>
+    <Section id="featureSection">
       <Title> Our Features</Title>
       <Container>
         <DecorationContainer>
