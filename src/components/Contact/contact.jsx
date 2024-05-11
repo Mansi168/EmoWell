@@ -43,7 +43,7 @@ const Contact = () => {
       return;
     }
 
-    // Handle form submission logic here
+   toast.success("All fields are correctly formatted")
   };
 
   return (
