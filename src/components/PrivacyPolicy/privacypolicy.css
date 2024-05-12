@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    font-family: sans-serif;
+    height: fit-content;
+    display: block;
+    margin: 2.5rem 10rem;
+}
+
+section .heading{
+    margin: 5rem;
+    text-align: center;
+}
+
+section .title h1{
+    font-weight: bolder;
+}
+
+section .context p{
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+section .policy div{
+    margin: 2.5rem 0rem;
+}
+
+section .policy h2{
+    font-weight: bolder;
+}
+
+section .policy p{
+    font-weight: thin;
+}
+
+.link{
+    font-weight: bold;
+    color: rgb(48, 175, 91);
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    section {
+        margin: 2.5rem 5rem; /* Adjust margin for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        margin: 2.5rem 2rem; /* Adjust margin for even smaller screens */
+    }
+    section .heading{
+        margin: 1rem;
+    }
+}
