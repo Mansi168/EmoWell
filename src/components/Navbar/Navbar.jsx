@@ -38,6 +38,7 @@ cursor: pointer;
   background: #2B394A;
   color:#fff;
   text-decoration : none;
+  border: 1px solid rgb(48, 175, 91);
 }
 `;
 const Navbar = () => {
