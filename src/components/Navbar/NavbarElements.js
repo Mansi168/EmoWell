@@ -2,6 +2,14 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom'
 //import {Link as LinkS} from 'react-scroll'
 
+export const  Body = styled.body`
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+padding: 0;
+margin: 0
+`
+
 export const Nav = styled.nav`
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 display: flex;
@@ -42,6 +50,7 @@ height: auto;
 flex: none;
 order: 1;
 flex-grow: 0;
+
 @media screen and (max-width: 480px){
   width: auto;
   height: auto;

@@ -5,15 +5,20 @@ import Features from '../components/Features';
 import About from '../components/About'
 import Footer from '../components/Footer/Footer';
 import Team from '../components/Team';
+import {
+  Body
+} from "../components/Navbar/NavbarElements";
 const Home = () => {
   return (
     <>
+       <Body>
         <Navbar/> 
-        <HeroSection />
-        <About/>
-        <Features /> 
-        <Team/>
-        <Footer />
+          <HeroSection />
+          <About/>
+          <Features /> 
+          <Team/>
+          <Footer />
+       </Body>
     </>
   )
 }
