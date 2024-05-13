@@ -32,6 +32,7 @@
     "react-router": "^6.22.3",
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
+    "react-toastify": "^10.0.5",
     "requirejs": "^2.3.6",
     "styled-components": "^6.1.8",
     "websocket": "^1.0.34"
@@ -44,6 +45,6 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.6"
+    "vite": "^5.2.11"
   }
 }

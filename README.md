@@ -104,11 +104,15 @@ Shoot up a terminal and run:
 ```
 cd EmoWell
 ```
+For installing all the required dependencies and packages
+```
+npm install
+```
+This will open up the website on localhost. You can begin working. The changes will be reflected here. 
+To access it navigate to http://localhost:5173/ in your browser
 ```
 npm run dev
 ```
-
-This will open up the website on localhost. You can begin working. The changes will be reflected here.
 
 ## If you have any ideas or questions 🤷
 

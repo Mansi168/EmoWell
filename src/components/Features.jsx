@@ -14,7 +14,7 @@ const Section = styled.section`
 
 const Title = styled.h2`
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--title-color);
   text-align: center;
   margin-bottom: 2rem;
@@ -51,14 +51,17 @@ box-sizing: border-box;
 `;
 
 const DecorationImg = styled.img`
-  width: 180px;
+  height : 250px;
 `;
 
 const DecorationTitle = styled.h3`
   font-size: 20px;
 
-  margin-bottom: var(--mb-1);
-  margin: 1rem;
+  margin-bottom: 1rem;
+  margin-right : 0.5rem;
+  margin-left : 0.5rem;
+  margin-top : 1rem;
+  
 `;
 
 const Button = styled.div`
@@ -81,7 +84,7 @@ const Button = styled.div`
 const FeaturesSection = () => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
-    <Section>
+    <Section id="featureSection">
       <Title> Our Features</Title>
       <Container>
         <DecorationContainer>
