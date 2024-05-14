@@ -51,7 +51,9 @@ box-sizing: border-box;
 `;
 
 const DecorationImg = styled.img`
-  height : 250px;
+  height : 220px;
+  width : 180px;
+  object-fit: cover;
 `;
 
 const DecorationTitle = styled.h3`
@@ -74,7 +76,7 @@ const Button = styled.div`
   transition: 0.3s;
   cursor: pointer;
   text-decoration: none;
-
+  
   &:hover {
     background-color: rgb(43, 57, 74);
     text-decoration: none;
