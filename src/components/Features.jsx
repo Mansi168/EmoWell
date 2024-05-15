@@ -1,9 +1,11 @@
 import img1 from "../assets/img1.png";
 import img2 from "../assets/image2.jpg";
 import img3 from "../assets/img-3.png";
+import img4 from "../assets/MH.avif"
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+
 
 const Section = styled.section`
   padding: 4rem 0 2rem;
@@ -33,9 +35,9 @@ const Container = styled.div`
 
 const DecorationContainer = styled.div`
 display: flex;
-flex-wrap: wrap;
 gap: 2rem;
-justify-content: center;
+flex-wrap:nowrap;
+
 `;
 
 const DecorationData = styled.div`
@@ -142,6 +144,19 @@ const FeaturesSection = () => {
               ) : (
                 <Button onClick={() => loginWithRedirect()}>Learn More</Button>
               )}
+          </DecorationData>
+          <DecorationData>
+            <DecorationImg
+              src={img4}
+              alt=""
+            />
+            <DecorationTitle>Mental Health Tests</DecorationTitle>
+            <p> Take the most popular and effective mental health assessment tests.</p>
+                 
+                <Link to="./assessment">
+                  <Button>Search Tests</Button>
+                </Link>
+              
           </DecorationData>
 
         </DecorationContainer>
