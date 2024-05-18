@@ -152,7 +152,7 @@ const Navbar = () => {
              </li>
               ):(
             <li>
-              <Button onClick={() => loginWithRedirect()}>
+              <Button onClick={() => loginWithRedirect()} style={{border:'1px solid rgb(48,175,91)'}}>
               Register</Button>
             </li>
             )}
