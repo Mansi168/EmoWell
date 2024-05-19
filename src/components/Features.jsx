@@ -5,7 +5,6 @@ import img4 from "../assets/MH.avif"
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import "./Features.css";
 
 
 const Section = styled.section`
