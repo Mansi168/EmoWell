@@ -10,6 +10,8 @@ import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 // import Features from './components/Features'
 
+import RouteNotFound from './Pages/RouteNotFound';
+
 function App() {
 
 
@@ -24,6 +26,7 @@ function App() {
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
     <Route path='/privacy' element={<Privacy/>}/>
+    <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
   
