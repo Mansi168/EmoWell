@@ -1,0 +1,332 @@
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height:auto;
+}
+
+
+.review-container
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 750px;
+    display: flex;
+    margin-top: 4rem ;
+}
+
+.review-container .reviewInfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: white;
+    background-image: url('../../assets/review.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
+    background-color: #F5F0F0;
+    /* border: 2px solid #FDA5A4; */
+    border-radius: 22px;
+}
+
+.review-container .reviewInfo h2
+{
+    color: #fff;
+    font-size:24px;
+    font-weight: 500;
+}
+
+.review-container .reviewInfo ul.info 
+{
+   position: relative;
+   margin: 20px 0; 
+}
+
+.review-container .reviewInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 0;
+   cursor: pointer;
+   align-items: flex-start;
+}
+
+.review-container .reviewInfo ul.info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+
+/* for gmail */
+.review-container .reviewInfo ul.info li span a
+{
+    color: #fff;
+    text-decoration: none;
+    width: 30px;
+    min-width: 30px;
+    
+}
+
+.review-container .reviewInfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+}
+
+.review-container .reviewInfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.review-container .reviewInfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+
+.review-container .reviewInfo ul.sci li
+{
+   list-style: none;  
+   margin-right: 15px;
+}
+
+.review-container .reviewInfo ul.sci li a
+{
+   text-decoration: none;
+}
+
+.review-container .reviewInfo ul.sci li a img
+{
+   filter: invert(1);
+}
+
+.review-container .reviewForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff; 
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+    background-color: #eafdff;
+    border: 2px solid #00dada;
+    border-radius: 22px;
+}
+
+.review-container .reviewForm h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.review-container .reviewForm .formBox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.review-container .reviewForm .formBox .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.review-container .reviewForm .formBox .inputBox.w50
+{
+    width: 47%;
+}
+
+.review-container .reviewForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+
+.review-container .reviewForm .formBox .inputBox input,
+.review-container .reviewForm .formBox .inputBox textarea 
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.review-container .reviewForm .formBox .inputBox textarea 
+{
+    height: 120px;
+}
+
+.review-container .reviewForm .formBox .inputBox span 
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.review-container .reviewForm .formBox .inputBox input:focus ~ span,
+.review-container .reviewForm .formBox .inputBox input:valid ~ span,
+.review-container .reviewForm .formBox .inputBox textarea:focus ~ span, 
+.review-container .reviewForm .formBox .inputBox textarea:valid ~ span,
+.review-container .reviewForm .formBox .inputBox.w50 input[type="email"]:not(:placeholder-shown) ~ span 
+{
+    transform: translateY(-20px);
+    font-size:  12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+} 
+
+/* Css for the submit button */
+.review-container .reviewForm .formBox .inputBox input[type="submit"]         
+{
+    position: relative;
+    background: #2B394A;
+    border-radius: 20px;
+    color: #fff;
+    border: black;
+    font-weight: 500;
+    max-width: 200px;
+    padding: 12px;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.review-container .reviewForm .formBox .inputBox input[type="submit"]:hover{
+    background: #00dada;
+    color:black;
+}
+
+/* make the form responsive */
+@media (max-width: 1200px)
+{
+    .review-container
+    {
+        width: 90%;
+        min-width: auto;
+        margin: 90px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .review-container .reviewInfo
+    {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .review-container .reviewForm
+    {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 991px)
+{
+    section
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    section::before
+    {
+        display: none;
+    }
+
+    .review-container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .review-container .reviewForm
+    {
+        width: 100%;
+      
+        border-radius: 0px;
+        margin-top: 7rem;
+    }
+
+    .review-container .reviewInfo
+    {
+        width: 100%;
+        
+        flex-direction: row;
+        border-radius: 0px;
+    }
+    .review-container .reviewInfo ul.sci
+    {
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .review-container .reviewForm
+    {
+        padding: 25px;
+    }
+
+    .review-container .reviewInfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-container .reviewInfo ul.sci
+    {
+        margin-top: 40px;
+    }
+
+    .review-container .reviewForm .formBox .inputBox.w50
+    {
+        width: 100%;
+    }
+}
