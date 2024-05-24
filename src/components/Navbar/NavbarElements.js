@@ -25,7 +25,7 @@ z-index: 19;
   &::-webkit-scrollbar {
     display: none;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1030px){
     transition: 0.8s all ease;
     overflow: visible;
     padding-top: 20px;
@@ -74,7 +74,7 @@ export const MobileIcon = styled.div`
   display: none;
   align-items: center;
   margin-bottom: 60px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1030px){
     display: block;
     position: absolute;
     top: 0;
@@ -104,7 +104,7 @@ flex: none;
 order: 1;
 flex-grow: 0;
 
-  @media screen and  (max-width: 768px){
+  @media screen and  (max-width: 1030px){
     display: flex;
     flex-direction: column;
     align-items: center;
