@@ -113,6 +113,7 @@ const CampContent = () => {
     <Container id="about">
     <AboutContainer className="hide-scrollbar">
       <CampSite 
+        data-aos="fade-up" data-aos-duration="1000"
         backgroundImage={stress}
         title="About Us"
       />
@@ -122,11 +123,11 @@ const CampContent = () => {
         subtitle="Somewhere in the Wilderness"
         peopleJoined="50+ Joined"
       /> */}
-      <GreenBox>
-        <Title>
+      <GreenBox data-aos="zoom-in">
+        <Title data-aos="fade-up" data-aos-duration="1200">
           <strong>Feeling Lost</strong> And Not Knowing The Way?
         </Title>
-        <Paragraph>
+        <Paragraph data-aos="fade-up" data-aos-duration="1650">
         Our platform is designed to provide you with the tools and resources you need to prioritize your emotional health. Whether you're looking for a chatbot to talk about your mental health, engaging activities to lift your mood, or a supportive community to connect with, Emowell has you covered.
         </Paragraph>
       </GreenBox>

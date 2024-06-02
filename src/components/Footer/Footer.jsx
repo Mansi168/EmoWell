@@ -41,9 +41,9 @@ const Footer = () => {
           <FooterLinksWrapper>
           
             <FooterLinkItems>
-  <FooterLinkTitle>Our Contacts</FooterLinkTitle>
-  <FooterLinkItems>
-  <ListItem >
+  <FooterLinkTitle data-aos="fade-up" data-aos-duration="1000">Our Contacts</FooterLinkTitle>
+  <FooterLinkItems data-aos="fade-up" data-aos-duration="1000">
+  <ListItem>
       <ListItemIcon>
         {/* <LocationOn style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
       </ListItemIcon>
@@ -66,9 +66,9 @@ const Footer = () => {
             
            
 <FooterLinkItems>
-  <FooterLinkTitle>Quick Links</FooterLinkTitle>
-  <FooterLinkItems>
-  <ListItem>
+  <FooterLinkTitle data-aos="fade-up" data-aos-duration="1000">Quick Links</FooterLinkTitle>
+  <FooterLinkItems data-aos="fade-up" data-aos-duration="1000">
+  <ListItem >
       <FooterLink onClick={()=> scrollToSection('about')}>
         <ListItemText primary="About" />
       </FooterLink>
@@ -98,8 +98,8 @@ const Footer = () => {
 </FooterLinkItems>
            
             <FooterLinkItems>
-  <FooterLinkTitle>Business Hours</FooterLinkTitle>
-  <FooterLinkItems>
+  <FooterLinkTitle data-aos="fade-up" data-aos-duration="1000">Business Hours</FooterLinkTitle>
+  <FooterLinkItems data-aos="fade-up" data-aos-duration="1000">
     <ListItem>
       <ListItemText primary="Monday - Friday" />
     </ListItem>

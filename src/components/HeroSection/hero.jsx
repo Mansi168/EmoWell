@@ -1,7 +1,7 @@
 // import  { useState } from "react";
 import { HeroContainer, HeroContent, HeroH1, HeroP } from "./Elements";
 
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box, keyframes } from "@mui/material";
 import bg from "../../assets/home.png";
 
 
@@ -45,6 +45,7 @@ const HeroSection = () => {
   const RightSubSectionJSX = (
     // Hero Image
     <img
+      data-aos="zoom-in" data-aos-duration="1200"
       src={bg}
       alt="hero_image"
       style={{
@@ -71,12 +72,13 @@ const HeroSection = () => {
                 style={{ marginTop: "10vh", marginLeft: "5vw" }}
               >
               <HeroH1
+                  data-aos="fade-up" data-aos-duration="1200"
                  style={{color: '#164863',fontFamily:'cursive'}}
               >Wellness Begins Within</HeroH1>
-                <Typography variant="h1" color="#ffffe6" sx={customH1Styles} >
+                <Typography variant="h1" color="#ffffe6" sx={customH1Styles} data-aos="fade-up" data-aos-duration="1300">
                 Healthy Minds, Happy Lives
                 </Typography>
-                <HeroP>
+                <HeroP data-aos="fade-right" data-aos-duration="1400">
                   We strive to create a community where every voice is heard, respected and celebrated.
                 </HeroP>
               </HeroContent>

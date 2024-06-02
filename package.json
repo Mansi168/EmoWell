@@ -19,6 +19,7 @@
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
     "@remixicon/react": "^4.2.0",
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "loader-utils": "^3.2.1",
