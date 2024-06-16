@@ -49,7 +49,6 @@ const DecorationData = styled.div`
   max-width: 250px;
   flex: 1 0 auto;
   box-sizing: border-box;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +69,7 @@ const DecorationTitle = styled.h3`
 
 const Button = styled.div`
   display: inline-block;
-  background-color: rgba(48, 175, 91, 0.85);
+  background-color: rgba(48, 175, 91);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
