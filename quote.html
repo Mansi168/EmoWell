@@ -4,7 +4,7 @@
 <head> 
 	<meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	
+	 <!-- Code for designing the background page -->
 	<style> 
 		* { 
 			margin: 0%; 
@@ -36,7 +36,7 @@
 		} 
 
 		
-
+		
 		section { 
 			height: 100vh; 
 			width: 100%; 
@@ -57,6 +57,7 @@
 		<br> 
 	 <!-- Array of images which would be displayed -->
 	<script> 
+	
 		const pics = [ 
 			'url( "1.0.jpg")', 
 			'url( "2.0.jpg")', 
@@ -82,26 +83,28 @@
     
 		var img = pics[0]; 
 		pic.style.backgroundImage = img;
- 
+ <!--Function to display image-->
 	function showImage(a) { 
 		
 		var img = pics[a]; 
 		pic.style.backgroundImage = img;
 		}
 
-	
 		
+	
+
 	var counter = 1;
 var i = setInterval(function(){
     showImage(counter);
 
     counter++;
+	
     if(counter === 18) {
        
 		counter=0;
 		showImage(counter);
     }
-}, 86400000);
+}, 86400000); 
 
 	
 		
