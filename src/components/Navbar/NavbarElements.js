@@ -35,10 +35,8 @@ export const NavbarContainer = styled.div`
   align-items: flex-start;
   padding: 0px;
   row-gap: 32px;
-
   width: auto;
   height: auto;
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -46,6 +44,18 @@ export const NavbarContainer = styled.div`
     width: auto;
     height: auto;
   }
+`;
+
+export const NavImg = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-left: 10px;
+  margin-right: auto; /* Pushes the container to the left */
+  ${'' /* margin-bottom: 20px; */}
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -60,12 +70,12 @@ export const NavLogo = styled(LinkR)`
   margin-left: 6px;
   font-weight: bold;
   text-decoration: none;
-
   &:hover {
     text-decoration: none;
     color: rgb(85 253 142);
   }
 `;
+
 export const MobileIcon = styled.div`
   display: none;
   align-items: center;
@@ -75,15 +85,16 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    ${"" /* width: auto; */}
+    ${'' /* width: auto; */}
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
-    padding-top: 10px;
+    padding-top: 3px;
   }
 `;
+
 export const NavMenu = styled.ul`
   display: flex;
   flex-direction: row;
@@ -92,13 +103,10 @@ export const NavMenu = styled.ul`
   gap: 21px;
   width: auto;
   height: 45px;
-
   /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
-
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -108,12 +116,13 @@ export const NavMenu = styled.ul`
     width: 100%;
     height: 41vh;
     position: absolute;
-    top: ${({ isOpen }) => (isOpen ? "80px" : "-41vh")};
+    top: ${({ isOpen }) => (isOpen ? '80px' : '-41vh')};
     left: 0;
     transition: 0.3s ease-in-out;
     background-color: #2b394a;
   }
 `;
+
 export const SubLogo = styled.span`
   font-size: 0.9rem; /* Adjust the font size as per your preference */
   color: #fff;
@@ -121,6 +130,7 @@ export const SubLogo = styled.span`
     font-size: 8px;
   }
 `;
+
 export const Dropdown = styled.div`
   /* overflow:hidden; */
   font-weight: 600;
@@ -156,16 +166,16 @@ export const ButtonDropdown = styled.button`
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-
   margin: 0;
 `;
+
 export const Navitem = styled.li`
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  ${"" /* justify-content: center; */}
+  ${'' /* justify-content: center; */}
   padding: 0px 20px;
   padding-bottom: 7px;
   gap: 10px;
@@ -182,24 +192,11 @@ export const Navitem = styled.li`
     background: rgb(48, 175, 91);
     color: white;
   }
-
   &.custom {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 7px;
   }
-`;
-
-export const NavImg = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  padding-left: 40px;
-  margin-right: auto; /* Pushes the container to the left */
-  ${"" /* margin-bottom: 20px; */}
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const NavLinks = styled(LinkR)`
@@ -214,16 +211,14 @@ export const NavLinks = styled(LinkR)`
   font-size: 1.4rem;
   line-height: 22px;
   color: #fff;
-  ${"" /* flex: none; */}
+  ${'' /* flex: none; */}
   align-items: center;
   justify-content: center;
   order: 0;
   flex-grow: 0;
-
   &.active {
     border-bottom: 3px solid #01bf71;
   }
-
   &:hover {
     color: #fff;
     text-decoration: none;
