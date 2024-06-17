@@ -83,8 +83,8 @@
     
 		var img = pics[0]; 
 		pic.style.backgroundImage = img;
- <!--Function to display image-->
-	function showImage(a) { 
+// Function to display image
+ function showImage(a) { 
 		
 		var img = pics[a]; 
 		pic.style.backgroundImage = img;
@@ -94,17 +94,18 @@
 	
 
 	var counter = 1;
+	
 var i = setInterval(function(){
     showImage(counter);
 
     counter++;
-	
+	//loop which helps to repeat the images after one cycle
     if(counter === 18) {
        
 		counter=0;
 		showImage(counter);
     }
-}, 86400000); 
+}, 86400000); //Setting time duration for every image to change in 24 hours
 
 	
 		
