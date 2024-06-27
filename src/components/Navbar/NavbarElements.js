@@ -2,7 +2,11 @@ import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,16 +20,12 @@ export const Nav = styled.nav`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1200px){
     transition: 0.8s all ease;
     overflow: visible;
-    padding-top: 20px;
-    padding-left: 10px;
+    justify-content: space-between;
   }
-  @media screen and (max-width: 480px){
-    // width: auto;
-    height: auto;
-  }
+  
 `
 
 export const NavbarContainer = styled.div`
@@ -42,8 +42,34 @@ export const NavbarContainer = styled.div`
   @media screen and (max-width: 480px){
     width: auto;
     height: auto;
+
+  flex-wrap: column;
+  padding: 0px;
+  row-gap: 32px;
+  width: 100%;
+  height: auto;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  @media screen and (max-width: 1200px){
+    width: auto;
+    height: auto;  
   }
 `
+
+export const NavImg = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-left: 10px;
+  margin-right: auto; /* Pushes the container to the left */
+  ${'' /* margin-bottom: 20px; */}
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+`;
 
 export const NavLogo = styled(LinkR)`
   height: auto;
@@ -63,7 +89,7 @@ export const MobileIcon = styled.div`
   display: none;
   align-items: center;
   margin-bottom: 60px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1200px){
     display: block;
     position: absolute;
     top: 0;
@@ -74,9 +100,10 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
-    padding-top: 10px;
+    padding-top: 3px;
   }
 `
+
 
 export const NavMenu = styled.ul`
   display: flex;
@@ -91,16 +118,35 @@ export const NavMenu = styled.ul`
   order: 1;
   flex-grow: 0;
   @media screen and  (max-width: 768px){
+
+export const NavMenu = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 50px 0px 90px;
+  gap: 21px;
+  width: auto;
+  height: 45px;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  @media screen and  (max-width: 1200px){
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 100%;
+    width: 40%;
     height: 41vh; 
     position: absolute;
     top: ${({ isOpen }) => (isOpen ? '80px' : '-41vh')};
-    left: 0;
+    right: 0;
     transition: 0.3s ease-in-out;
     background-color: #2B394A;
   }
@@ -111,10 +157,17 @@ export const SubLogo = styled.span`
   color: #fff;
   @media screen and  (max-width: 468px){
     font-size: 8px;
+
   }
 `;
 
 export const Dropdown = styled.div`
+
+  } 
+`;
+
+export const Dropdown=styled.div`
+
   /* overflow:hidden; */
   font-weight: 600;
   &:hover{
@@ -123,7 +176,11 @@ export const Dropdown = styled.div`
   }
 `;
 
+
 export const Dropdowncontent = styled.div`
+
+export const Dropdowncontent=styled.div`
+
   display: none;
   position: relative;
   background-color: #f9f9f9;
@@ -143,7 +200,11 @@ export const Dropdowncontent = styled.div`
   }
 `;
 
+
 export const ButtonDropdown = styled.button`
+
+export const ButtonDropdown=styled.button`
+
   font-size: 18px;
   font-weight: 600;
   color: white;
@@ -162,7 +223,11 @@ export const Navitem = styled.li`
   padding: 0px 20px;
   padding-bottom: 7px;
   gap: 10px;
+
   border: 0.5px solid #05f8cb;
+
+  border:0.5px solid #05f8cb;
+
   width:120px;
   height: 34px;
   border-radius: 22px;
@@ -175,6 +240,7 @@ export const Navitem = styled.li`
     background: rgb(48, 175, 91);
     color: white;
   }
+
   &.custom {
     padding-left: 10px; 
     padding-right: 10px; 
@@ -193,6 +259,15 @@ export const NavImg = styled.div`
   order: 0;
   flex-grow: 0;
 `;
+
+
+
+  &.custom {
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-bottom: 7px;
+  }
+`
 
 export const NavLinks = styled(LinkR)`
   width: auto;
