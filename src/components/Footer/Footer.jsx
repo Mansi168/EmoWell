@@ -79,10 +79,11 @@ const Footer = () => {
       </FooterLink>
     </ListItem>
     <ListItem>
-      <FooterLink onClick={()=> scrollToSection('featureSection')}className="footer-link">
-        <ListItemText primary="Services" />
-      </FooterLink>
-    </ListItem>
+  <FooterLink to="/services">
+    <ListItemText primary="Services" />
+  </FooterLink>
+</ListItem>
+
     <ListItem>
       <FooterLink to="/privacy">
         <ListItemText primary="Privacy and Policy" />

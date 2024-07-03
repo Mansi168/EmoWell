@@ -10,6 +10,7 @@ import ChatComponent from './components/Forum';
 import ReadingArea from './Pages/ReadingArea';
 import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
+import Services from './Pages/Services';
 // import Features from './components/Features'
 
 import RouteNotFound from './Pages/RouteNotFound';
@@ -28,6 +29,7 @@ function App() {
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
     <Route path='/privacy' element={<Privacy/>}/>
+    <Route path='/services' element={<Services />} />
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
