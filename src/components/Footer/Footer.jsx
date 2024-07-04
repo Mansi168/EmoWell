@@ -2,6 +2,7 @@ import  { useState } from "react";
 import {ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import logo from "../../assets/logo.png";
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 import {
   FooterContainer,
   FooterWrap,
@@ -20,15 +21,13 @@ const Footer = () => {
   const handleClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
-  const [ setIsActive] = useState(false);
-  const removeActive = () => {
-    setIsActive(false)
-  }
+  
+
+  
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      removeActive();
     }
   };
 
@@ -86,6 +85,11 @@ const Footer = () => {
     <ListItem>
       <FooterLink to="/privacy">
         <ListItemText primary="Privacy and Policy" />
+      </FooterLink>
+    </ListItem>
+    <ListItem>
+      <FooterLink to="/faq" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <ListItemText primary="FAQ" />
       </FooterLink>
     </ListItem>
    
