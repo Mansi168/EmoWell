@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import logo from "../../assets/logo.png";
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 import {
   FooterContainer,
   FooterWrap,
@@ -29,7 +30,6 @@ const Footer = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      removeActive();
     }
   };
 

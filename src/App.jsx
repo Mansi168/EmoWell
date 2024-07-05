@@ -11,6 +11,7 @@ import ReadingArea from './Pages/ReadingArea';
 import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 // import Features from './components/Features'
+import FAQ from './components/FAQ';
 
 import RouteNotFound from './Pages/RouteNotFound';
 
@@ -28,6 +29,7 @@ function App() {
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
     <Route path='/privacy' element={<Privacy/>}/>
+    <Route path='/faq' element={<FAQ/>}/>
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
