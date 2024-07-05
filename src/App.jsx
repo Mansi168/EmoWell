@@ -29,6 +29,7 @@ function App() {
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
     <Route path='/privacy' element={<Privacy/>}/>
+    <Route path='/faq' element={<FAQ/>}/>
     <Route path='/services' element={<Services />} />
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
