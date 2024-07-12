@@ -104,8 +104,7 @@ const Footer = () => {
                   </ListItem>
                   <ListItem>
                     <FooterLink
-                      onClick={() => scrollToSection("featureSection")}
-                      className="footer-link">
+                      to="/services">
                       <ListItemText primary="Services" />
                     </FooterLink>
                   </ListItem>
