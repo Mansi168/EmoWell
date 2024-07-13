@@ -234,14 +234,19 @@ section
 }
 
 /* make the form responsive */
+@media (min-width:321px) and (max-width:621px){
+    .contact-container{
+        width: 90%;
+        min-width: auto;
+  
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+}
 @media (max-width: 1200px)
 {
     .contact-container
     {
-        width: 90%;
-        min-width: auto;
-        margin: 90px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+       
     }
 
     .contact-container .contactInfo
