@@ -21,7 +21,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
-
+import { useNavigate } from "react-router";
 const Button = styled.button`
 padding: 12px 24px;
 font-style: normal;
@@ -45,7 +45,7 @@ const Navbar = () => {
   const [ setIsActive] = useState(false);
   const { loginWithRedirect, isAuthenticated,logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate()
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -75,7 +75,12 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+   const handleNavClick = (path,sectionId)=>{
+     navigate(path)
+     setTimeout(()=>{
+      scrollToSection(sectionId)
+     },100)
+   }
 
   return (
     <>
@@ -115,12 +120,12 @@ const Navbar = () => {
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="/#about" onClick={()=> scrollToSection('about')}>
+              <NavLinks to="/#about" onClick={() => handleNavClick('/', 'about')}>
                 About
               </NavLinks>
             </Navitem>
             <Navitem className="custom">
-              <NavLinks to="/#Features"  onClick={()=> scrollToSection('featureSection')}>
+              <NavLinks to="/#Features"  onClick={() => handleNavClick('/', 'featureSection')}>
                 Features
               </NavLinks>
             </Navitem>
