@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/image2.jpg";
 import img3 from "../assets/img-3.png";
+import img4 from "../assets/MH.avif"
 
 const Section = styled.section`
   padding: 4rem 0 2rem;
@@ -33,9 +34,15 @@ const Container = styled.div`
 
 const DecorationContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2rem;
   justify-content: center;
+   @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+    @media screen and (min-width:801px) and (max-width: 1200px) {
+    flex-wrap:wrap;
+  }
 `;
 
 const DecorationData = styled.div`
@@ -52,6 +59,9 @@ const DecorationData = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 800px) {
+    width:550px;
+  }
 `;
 
 const DecorationImg = styled.img`
@@ -147,6 +157,20 @@ const FeaturesSection = () => {
               <Button onClick={() => loginWithRedirect()}>Learn More</Button>
             )}
           </DecorationData>
+          <DecorationData>
+            <DecorationImg
+              src={img4}
+              alt="MH"
+            />
+          <DecorationTitle>Mental Health Tests</DecorationTitle>
+            <p>
+              Take the most popular and effective mental health assessments.
+            </p>
+            
+            <Link to="/assessment">
+                <Button>Search Tests</Button>
+              </Link>
+              </DecorationData>
         </DecorationContainer>
       </Container>
     </Section>
