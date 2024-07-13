@@ -40,6 +40,9 @@ const DecorationContainer = styled.div`
    @media screen and (max-width: 800px) {
     flex-direction: column;
   }
+    @media screen and (min-width:801px) and (max-width: 1200px) {
+    flex-wrap:wrap;
+  }
 `;
 
 const DecorationData = styled.div`
