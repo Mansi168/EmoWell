@@ -161,7 +161,7 @@ const FeaturesSection = () => {
             />
           <DecorationTitle>Mental Health Tests</DecorationTitle>
             <p>
-              Take the most popular and effective mental health assessmwents.
+              Take the most popular and effective mental health assessments.
             </p>
             
             <Link to="/assessment">
