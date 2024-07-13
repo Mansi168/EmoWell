@@ -1,3 +1,4 @@
+
 import { useAuth0 } from '@auth0/auth0-react';
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
@@ -6,6 +7,15 @@ import styled from 'styled-components';
 import img1 from "../assets/img1.png";
 import img2 from "../assets/image2.jpg";
 import img3 from "../assets/img-3.png";
+
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import img1 from "../assets/img1.png";
+import img2 from "../assets/image2.jpg";
+import img3 from "../assets/img-3.png";
+import img4 from "../assets/MH.avif"
+
 
 const Section = styled.section`
   padding: 4rem 0 2rem;
@@ -31,13 +41,26 @@ const Container = styled.div`
 
 const DecorationContainer = styled.div`
   display: flex;
+
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+
+  flex-wrap: nowrap;
+  gap: 2rem;
+  justify-content: center;
+   @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+    @media screen and (min-width:801px) and (max-width: 1200px) {
+    flex-wrap:wrap;
+  }
+
 `;
 
 const DecorationData = styled.div`
   text-align: center;
+
   padding: 1rem;
   background-color: var(--container-color);
   box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
@@ -49,16 +72,45 @@ const DecorationData = styled.div`
 const DecorationImg = styled.img`
   width: 100%;
   height: auto;
+
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  width: calc(25% - 1rem);
+  max-width: 250px;
+  flex: 1 0 auto;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 800px) {
+    width:550px;
+  }
+`;
+
+const DecorationImg = styled.img`
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+
 `;
 
 const DecorationTitle = styled.h3`
   font-size: 1.5rem;
+
   margin-bottom: 1rem;
+
+  margin: 1rem 0;
+  color: var(--title-color);
+
 `;
 
 const Button = styled.div`
   display: inline-block;
-  background-color: rgb(48, 175, 91);
+  background-color: rgba(48, 175, 91);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
@@ -66,8 +118,17 @@ const Button = styled.div`
   transition: 0.3s;
   cursor: pointer;
 
+
   &:hover {
     background-color: rgb(43, 57, 74);
+
+  text-decoration: none;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: rgba(43, 57, 74, 0.85);
+    text-decoration: none;
+
   }
 `;
 
@@ -80,33 +141,101 @@ const FeaturesSection = () => {
       <Container>
         <DecorationContainer>
           <DecorationData>
+
             <DecorationImg src={img1} alt="" />
             <DecorationTitle>Reading Area</DecorationTitle>
             <p>Ready to unwind and let loose? Discover actionable mental health and wellbeing advice.</p>
             <Link to="/readingarea"><Button>Read Now</Button></Link>
+
+            <DecorationImg src={img1} alt="Reading Area" />
+            <DecorationTitle>Reading Area</DecorationTitle>
+            <p>
+              Ready to unwind and let loose? Discover actionable mental health
+              and wellbeing advice.
+            </p>
+            <Link to="/readingarea">
+              <Button>Read Now</Button>
+            </Link>
+
           </DecorationData>
+
           <DecorationData>
+
             <DecorationImg src={img2} alt="" />
             <DecorationTitle>Explore Games</DecorationTitle>
             <p>Experience the joy of play to relax and rejuvenate! Dive into our games for a refreshing escape.</p>
             <Link to="./games"><Button>Play Now</Button></Link>
+
+            <DecorationImg src={img2} alt="Explore Games" />
+            <DecorationTitle>Explore Games</DecorationTitle>
+            <p>
+              Experience the joy of play to relax and rejuvenate! Dive into our
+              games for a refreshing escape.
+            </p>
+            <Link to="/games">
+              <Button>Play Now</Button>
+            </Link>
+
           </DecorationData>
           <DecorationData>
+
             <DecorationImg src={img3} alt="" />
             <DecorationTitle>Chat Bot</DecorationTitle>
             <p>Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
             <Link to="https://emowellbeing.streamlit.app/" target="_blank"><Button>Chat Now</Button></Link>
+          <DecorationImg src={img3} alt="Chat Bot" />
+            <DecorationTitle>Chat Bot</DecorationTitle>
+            <p>
+              Engage in a lively chat with our friendly bot for a fun and
+              helpful interaction!
+            </p>
+            <Link to="https://emowellbeing.streamlit.app/" target="_blank">
+              <Button>Chat Now</Button>
+            </Link>
+
           </DecorationData>
           <DecorationData>
+
             <DecorationImg src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1707888470/CerviCare/Homepage/3_sbiawo.png" alt="" />
             <DecorationTitle>Community Forum</DecorationTitle>
             <p>Engage in a lively chat with our friendly bot for a fun and helpful interaction!</p>
             {isAuthenticated ? (
               <Link to="/forum"><Button>Learn More</Button></Link>
+
+            <DecorationImg
+              src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1707888470/CerviCare/Homepage/3_sbiawo.png"
+              alt="Community Forum"
+            />
+            <DecorationTitle>Community Forum</DecorationTitle>
+            <p>
+              Engage in a lively chat with our friendly bot for a fun and
+              helpful interaction!
+            </p>
+            {isAuthenticated ? (
+              <Link to="/forum">
+                <Button>Learn More</Button>
+              </Link>
+
             ) : (
               <Button onClick={() => loginWithRedirect()}>Learn More</Button>
             )}
           </DecorationData>
+
+          <DecorationData>
+            <DecorationImg
+              src={img4}
+              alt="MH"
+            />
+          <DecorationTitle>Mental Health Tests</DecorationTitle>
+            <p>
+              Take the most popular and effective mental health assessments.
+            </p>
+            
+            <Link to="/assessment">
+                <Button>Search Tests</Button>
+              </Link>
+              </DecorationData>
+
         </DecorationContainer>
       </Container>
     </Section>

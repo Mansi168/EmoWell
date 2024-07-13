@@ -13,6 +13,16 @@ const GreenBox = styled.div`
   margin-bottom: 15px;
   border-radius: 22px;
   overflow: hidden;
+  @media (max-width:800px){
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:350px;
+    min-width:70vw;
+    padding:20px;
+  }
+  @media (min-width: 1024px) { /* lg breakpoint */
+
 
   @media (min-width: 768px) { /* md breakpoint */
     padding: 30px;
@@ -42,7 +52,16 @@ const Paragraph = styled.p`
   color: #fff;
   margin-top: 5px;
 
+
   @media (min-width: 768px) { /* md breakpoint */
+
+  @media (max-width:500px){
+    display:flex;
+    justify-content:center;
+    font-size:12px;
+  }
+  @media (min-width: 1280px) { /* xl breakpoint */
+
     font-size: 16px;
   }
 `;
