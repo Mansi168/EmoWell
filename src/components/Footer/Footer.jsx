@@ -114,7 +114,7 @@ const Footer = () => {
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/faqs">
+                    <FooterLink to="/faq">
                       <ListItemText primary="FAQs" />
                     </FooterLink>
                   </ListItem>
