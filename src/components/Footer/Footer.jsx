@@ -114,6 +114,11 @@ const Footer = () => {
                       <ListItemText primary="Privacy and Policy" />
                     </FooterLink>
                   </ListItem>
+                  <ListItem>
+                    <FooterLink to="/community">
+                      <ListItemText primary="Community Page" />
+                    </FooterLink>
+                  </ListItem>
 
                   {/* <ListItem>
       <FooterLink to="/donate" className="footer-link">

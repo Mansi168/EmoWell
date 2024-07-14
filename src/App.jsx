@@ -14,6 +14,7 @@ import Privacy from './Pages/Privacy';
 import FAQ from './components/FAQ';
 
 import RouteNotFound from './Pages/RouteNotFound';
+import CommunityPage from "./components/community/CommunityPage";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     <Route path='/games' element={<Games/>} />
     <Route path='/privacy' element={<Privacy/>}/>
     <Route path='/faq' element={<FAQ/>}/>
+    <Route path="/community" element={<CommunityPage/>}/>
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
