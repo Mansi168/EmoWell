@@ -8,6 +8,7 @@
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    margin: 0 auto;
   }
   
   .community-container {
@@ -15,6 +16,7 @@
     max-width: 1200px;
     padding: 20px;
     box-sizing: border-box;
+    margin: 2rem;
   }
   
   .title {
@@ -73,7 +75,27 @@
   .view-contributors-btn:hover {
     background-color: #267b4a;
   }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+  }
+  .contribute-btn {
+    background-color: #318f5f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
   
+  .contribute-btn:hover {
+    background-color: #2a704a;
+  }
   /* Contributors section */
   .contributors-container {
     margin-top: 40px;
