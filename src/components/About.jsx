@@ -27,7 +27,14 @@ const GreenBox = styled.div`
   position: relative;
   width: 60%;
   overflow: hidden;
-  
+  @media (max-width:800px){
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:350px;
+    min-width:70vw;
+    padding:20px;
+  }
   @media (min-width: 1024px) { /* lg breakpoint */
 
     max-width: 680px;
@@ -62,7 +69,11 @@ const Paragraph = styled.p`
   line-height: 1.6;
   color: #fff;
   margin-top: 5px;
-  
+  @media (max-width:500px){
+    display:flex;
+    justify-content:center;
+    font-size:12px;
+  }
   @media (min-width: 1280px) { /* xl breakpoint */
     font-size: 16px;
   }
@@ -115,6 +126,8 @@ const CampContent = () => {
       <CampSite 
         backgroundImage={stress}
         title="About Us"
+        data-aos="fade-up"
+        data-aos-delay="100"
       />
       {/* <CampSite 
         backgroundImage="img-1.png"
@@ -122,11 +135,12 @@ const CampContent = () => {
         subtitle="Somewhere in the Wilderness"
         peopleJoined="50+ Joined"
       /> */}
-      <GreenBox>
-        <Title>
+      <GreenBox data-aos="zoom-in"
+        data-aos-delay="200">
+        <Title data-aos="fade-up">
           <strong>Feeling Lost</strong> And Not Knowing The Way?
         </Title>
-        <Paragraph>
+        <Paragraph data-aos="fade-up">
         Our platform is designed to provide you with the tools and resources you need to prioritize your emotional health. Whether you're looking for a chatbot to talk about your mental health, engaging activities to lift your mood, or a supportive community to connect with, Emowell has you covered.
         </Paragraph>
       </GreenBox>

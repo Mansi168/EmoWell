@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar/index'
 import BlogList from '../components/BlogList/index'
 import { blogList } from '../config/data'
 import EmptyList from '../components//EmptyList/index'
-
+import Footer from "../components/Footer/Footer";
 const ReadingArea = () => {
   const [blogs, setBlogs] = useState(blogList);
   const [searchKey, setSearchKey] = useState('');
@@ -46,6 +46,7 @@ const ReadingArea = () => {
 
       {/* Blog List */}
       {!blogs.length?<EmptyList/>:<BlogList blogs={blogs}/>}
+      <Footer/> 
     </div>
   )
 }
