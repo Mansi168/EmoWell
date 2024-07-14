@@ -49,7 +49,7 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const [setScrollPosition] = useState(0);
+  const [scrollPosition,setScrollPosition] = useState(0);
 
 
   useEffect(() => {
