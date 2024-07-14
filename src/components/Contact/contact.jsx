@@ -71,7 +71,7 @@ const Contact = () => {
                 <span>Email Address</span>
               </div>
               <div className="inputBox w50">
-                <input type="text" name="mobileNumber" value={formData.mobileNumber} onChange={handleChange}  />
+                <input type="text" name="mobileNumber" value={formData.mobileNumber} onChange={handleChange} required/>
                 <span>Mobile Number</span>
               </div>
               <div className="inputBox w100">
