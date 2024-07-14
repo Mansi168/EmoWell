@@ -100,10 +100,10 @@ const FeaturesSection = () => {
 
   return (
     <Section id="featureSection">
-      <Title>Our Features</Title>
+      <Title data-aos="fade-up">Our Features</Title>
       <Container>
         <DecorationContainer>
-          <DecorationData>
+          <DecorationData data-aos="fade-up">
             <DecorationImg src={img1} alt="Reading Area" />
             <DecorationTitle>Reading Area</DecorationTitle>
             <p>
@@ -115,7 +115,7 @@ const FeaturesSection = () => {
             </Link>
           </DecorationData>
 
-          <DecorationData>
+          <DecorationData data-aos="fade-down">
             <DecorationImg src={img2} alt="Explore Games" />
             <DecorationTitle>Explore Games</DecorationTitle>
             <p>
@@ -127,7 +127,7 @@ const FeaturesSection = () => {
             </Link>
           </DecorationData>
 
-          <DecorationData>
+          <DecorationData data-aos="fade-up">
             <DecorationImg src={img3} alt="Chat Bot" />
             <DecorationTitle>Chat Bot</DecorationTitle>
             <p>
@@ -139,7 +139,7 @@ const FeaturesSection = () => {
             </Link>
           </DecorationData>
 
-          <DecorationData>
+          <DecorationData data-aos="fade-down">
             <DecorationImg
               src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1707888470/CerviCare/Homepage/3_sbiawo.png"
               alt="Community Forum"
@@ -157,7 +157,7 @@ const FeaturesSection = () => {
               <Button onClick={() => loginWithRedirect()}>Learn More</Button>
             )}
           </DecorationData>
-          <DecorationData>
+          <DecorationData data-aos="fade-up">
             <DecorationImg
               src={img4}
               alt="MH"
