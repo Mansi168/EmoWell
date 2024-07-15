@@ -53,7 +53,7 @@ const Navbar = () => {
   const [setScrollPosition] = useState(0);
 
   const loginWithFirebase = () => {
-    
+  
     auth.signInWithPopup(googleProvider)
       .then((result) => {
         console.log(result.user);

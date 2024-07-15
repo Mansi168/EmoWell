@@ -9,9 +9,9 @@ import 'firebase/compat/auth';
 const firebaseConfig = {
   apiKey: "**************************",
   authDomain: "***************",
-  projectId: "**************8",
+  projectId: "***************",
   storageBucket: "*******************",
-  messagingSenderId: "****************",
+  messagingSenderId: "*****************",
   appId: "*******************",
   measurementId: ""
 };
