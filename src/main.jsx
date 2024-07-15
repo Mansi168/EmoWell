@@ -8,9 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
   domain={import.meta.env.VITE_DOMAIN}
   clientId={import.meta.env.VITE_CLIENT}
-  authorizationParams={{
-    redirect_uri: window.location.origin
-  }}
+  redirectUri={window.location.origin}
 >
   <App />
 </Auth0Provider> 

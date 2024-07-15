@@ -18,7 +18,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
+import {auth,googleProvider} from '../../firebaseConfig';
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
 
@@ -43,13 +44,25 @@ cursor: pointer;
 `;
 const Navbar = () => {
   const [ setIsActive] = useState(false);
-  const { loginWithRedirect, isAuthenticated,logout } = useAuth0();
+  const [isAuthenticated,setisAuthenticated] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
   const [setScrollPosition] = useState(0);
+
+  const loginWithFirebase = () => {
+    
+    auth.signInWithPopup(googleProvider)
+      .then((result) => {
+        console.log(result.user);
+        setisAuthenticated(true);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
 
   useEffect(() => {
@@ -144,7 +157,7 @@ const Navbar = () => {
                 {isOpen && (
                 <Dropdowncontent>
                   <a href="/profile">User Profile</a>
-                  <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}style={{
+                  <button onClick={() => {auth.signOut(), setisAuthenticated(true)}} style={{
                     fontSize:'16px', fontWeight: '600'
                   }}>
                   Log Out
@@ -156,7 +169,7 @@ const Navbar = () => {
             </li>
             ):(
             <li>
-              <Button onClick={() => loginWithRedirect()} style={{border:'1px solid rgb(48,175,91)'}}>
+              <Button onClick={() => loginWithFirebase()} style={{border:'1px solid rgb(48,175,91)'}}>
               Register</Button>
             </li>
             )}
