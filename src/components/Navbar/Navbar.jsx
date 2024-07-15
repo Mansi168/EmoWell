@@ -21,20 +21,22 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
-
+import { useNavigate } from "react-router";
 const Button = styled.button`
-padding: 12px 24px;
+padding: 5px 24px;
 font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.4rem;
-  line-height: 22px;
+  //line-height: 22px;
 background: rgb(48, 175, 91);
-color: #fff;
+color: white;
 border: none;
-border-radius: 14px;
+border-radius: 20px;
 cursor: pointer;
 
+    transition: all 0.2s ease-in;
 &:hover {
+    transform: translateY(5px);
   background: #2B394A;
   color:#fff;
   text-decoration : none;
@@ -45,11 +47,11 @@ const Navbar = () => {
   const [ setIsActive] = useState(false);
   const { loginWithRedirect, isAuthenticated,logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate()
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const [setScrollPosition] = useState(0);
+  const [scrollPosition,setScrollPosition] = useState(0);
 
 
   useEffect(() => {
@@ -75,7 +77,12 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+   const handleNavClick = (path,sectionId)=>{
+     navigate(path)
+     setTimeout(()=>{
+      scrollToSection(sectionId)
+     },100)
+   }
 
   return (
     <>
@@ -94,7 +101,7 @@ const Navbar = () => {
             </NavLogo>
           </Link>
           </NavImg> */}
-          <NavImg>
+          <NavImg data-aos="fade-down">
             <img src={logo}
               alt="favicon"
               height="60"
@@ -108,19 +115,19 @@ const Navbar = () => {
           <MobileIcon onClick={toggle}>
             {isOpen ? <FaTimes /> : <FaBars />} {/* Close icon when open */}
           </MobileIcon>
-          <NavMenu isOpen={isOpen}>
+          <NavMenu isOpen={isOpen} data-aos="fade-down">
             <Navitem>
               <NavLinks to="/" onClick={handleLogoClick}>
                 Home
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="/#about" onClick={()=> scrollToSection('about')}>
+              <NavLinks to="/#about" onClick={() => handleNavClick('/', 'about')}>
                 About
               </NavLinks>
             </Navitem>
             <Navitem className="custom">
-              <NavLinks to="/#Features"  onClick={()=> scrollToSection('featureSection')}>
+              <NavLinks to="/#Features"  onClick={() => handleNavClick('/', 'featureSection')}>
                 Features
               </NavLinks>
             </Navitem>

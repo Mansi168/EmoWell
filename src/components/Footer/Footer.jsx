@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import logo from "../../assets/logo.png";
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   FooterContainer,
   FooterWrap,
@@ -55,7 +55,8 @@ const Footer = () => {
                       src="https://cdn.lordicon.com/surcxhka.json"
                       trigger="hover"
                       stroke="bold"
-                      colors="primary:#ffffff,secondary:#ffffff"></lord-icon>{" "}
+                      colors="primary:#ffffff,secondary:#ffffff"
+                    ></lord-icon>{" "}
                     <ListItemText primary="ABCDEF, Rohini, ND-India" />
                   </ListItem>
                   <ListItem>
@@ -69,7 +70,8 @@ const Footer = () => {
                       }}
                       src="https://cdn.lordicon.com/srsgifqc.json"
                       trigger="hover"
-                      colors="primary:#ffffff"></lord-icon>{" "}
+                      colors="primary:#ffffff"
+                    ></lord-icon>{" "}
                     <ListItemText primary="+012 345 67890" />
                   </ListItem>
                   <ListItem>
@@ -83,7 +85,8 @@ const Footer = () => {
                       }}
                       src="https://cdn.lordicon.com/xtzvywzp.json"
                       trigger="hover"
-                      colors="primary:#ffffff"></lord-icon>{" "}
+                      colors="primary:#ffffff"
+                    ></lord-icon>{" "}
                     <ListItemText primary="abcdef@gmail.com" />
                   </ListItem>
                 </FooterLinkItems>
@@ -104,15 +107,25 @@ const Footer = () => {
                   </ListItem>
                   <ListItem>
                     <FooterLink
-  onClick={() => scrollToSection("featureSection")}
-  className="footer-link"
-  to="/services">
+                      onClick={() => scrollToSection("featureSection")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="Services" />
+                    </FooterLink>
+                  </ListItem>
+                  <ListItem>
+                    <FooterLink to="/faq">
+                      <ListItemText primary="FAQs" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
                     <FooterLink to="/privacy">
                       <ListItemText primary="Privacy and Policy" />
+                    </FooterLink>
+                  </ListItem>
+                  <ListItem>
+                    <FooterLink to="/community">
+                      <ListItemText primary="Community" />
                     </FooterLink>
                   </ListItem>
 

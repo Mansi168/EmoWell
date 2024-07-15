@@ -170,45 +170,39 @@ export const ButtonDropdown = styled.button`
 `;
 
 export const Navitem = styled.li`
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  ${'' /* justify-content: center; */}
-  padding: 0px 20px;
-  padding-bottom: 7px;
   gap: 10px;
-  border: 0.5px solid #05f8cb;
-  width: 120px;
-  height: 34px;
-  border-radius: 22px;
+    height: auto;
+  border: 1px solid #05f8cb;
+  min-width: 120px;
+  border-radius: 30px;
   color: #fff;
-  flex: none;
   order: 0;
-  flex-grow: 0;
   text-decoration: none;
+    
+    transition : all 0.3s ease-in;
   &:hover {
+      transform: translateY(5px);
     background: rgb(48, 175, 91);
     color: white;
   }
   &.custom {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 7px;
+    //padding-left: 10px;
+    //padding-right: 10px;
+    //padding-bottom: 7px;
   }
 `;
 
 export const NavLinks = styled(LinkR)`
-  width: auto;
-  height: 36px;
-  padding: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 8px 25px;
   text-decoration: none;
   font-style: normal;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: 400;
+  font-size: 1.1rem;
   line-height: 22px;
   color: #fff;
   ${'' /* flex: none; */}
