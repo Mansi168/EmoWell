@@ -15,6 +15,7 @@ import Assessment from './Pages/Assessment'
 import FAQ from './components/FAQ';
 
 import RouteNotFound from './Pages/RouteNotFound';
+import CommunityPage from "./components/community/CommunityPage";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
     <Route path='/assessment' element={<Assessment/>} />
     <Route path='/privacy' element={<Privacy/>}/>
     <Route path='/faq' element={<FAQ/>}/>
+    <Route path="/community" element={<CommunityPage/>}/>
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>

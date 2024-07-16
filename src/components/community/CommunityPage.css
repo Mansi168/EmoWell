@@ -1,0 +1,227 @@
+/* Base styles */
+.community-page {
+    background: linear-gradient(135deg, #2f855a, #38a169, #48bb78);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  
+  .community-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 2rem;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #2b6a4f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 0;
+  }
+  
+  .view-contributors-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #318f5f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-contributors-btn:hover {
+    background-color: #267b4a;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+  }
+  .contribute-btn {
+    background-color: #318f5f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .contribute-btn:hover {
+    background-color: #2a704a;
+  }
+  /* Contributors section */
+  .contributors-container {
+    margin-top: 40px;
+  }
+  
+  .contributors-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .contributors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contributor-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b6a4f;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contributor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contributor-link {
+    display: block;
+  }
+  
+  .contributor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .contributor-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .contributor-contributions {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  
+    .contributors-container {
+      margin-top: 20px;
+    }
+  
+    .contributor-card {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+  
+    .card {
+      padding: 0.75rem;
+    }
+  
+    .view-contributors-btn {
+      padding: 8px 16px;
+    }
+  
+    .contributors-container {
+      margin-top: 10px;
+    }
+  
+    .contributor-card {
+      width: 150px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .contributors-grid {
+      justify-content: space-between;
+    }
+  
+    .contributor-card {
+      width: calc(20% - 20px);
+      margin-bottom: 20px;
+    }
+  }
+  
