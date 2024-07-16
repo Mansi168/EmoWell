@@ -16,7 +16,7 @@ import {
   WebsiteRights,
   Footerbg,
 } from "./FooterElements";
-import { Height } from "@mui/icons-material";
+import { Height, Padding } from "@mui/icons-material";
 
 const Footer = () => {
   const handleClick = () => {
@@ -41,10 +41,10 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
-                <FooterLinkTitle>Our Contacts</FooterLinkTitle>
+                <FooterLinkTitle style={{minWidth:"0px"}}>Our Contacts</FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
-                    <ListItemIcon>
+                    <ListItemIcon style={{minWidth:"0px"}}>
                       {/* <LocationOn style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
                     </ListItemIcon>
                     <lord-icon
@@ -60,7 +60,7 @@ const Footer = () => {
                     <ListItemText primary="ABCDEF, Rohini, ND-India" />
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon>
+                    <ListItemIcon style={{minWidth: "0px",}}>
                       {/* <Phone style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
                     </ListItemIcon>
                     <lord-icon
@@ -75,7 +75,7 @@ const Footer = () => {
                     <ListItemText primary="+012 345 67890" />
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon>
+                    <ListItemIcon style={{minWidth: "0px",}}>
                       {/* <Mail style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
                     </ListItemIcon>
                     <lord-icon

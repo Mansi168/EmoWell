@@ -19,6 +19,7 @@ export const Nav = styled.nav`
   }
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
+    justify-content: space-between;
     overflow: visible;
     padding-top: 20px;
     padding-left: 10px;
@@ -50,7 +51,8 @@ export const NavImg = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-  padding-left: 10px;
+  justify-content: start;
+  padding-left: 5px;
   margin-right: auto; /* Pushes the container to the left */
   ${'' /* margin-bottom: 20px; */}
   flex: none;
