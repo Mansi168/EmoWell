@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import logo from "../../assets/logo.png";
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import {
   FooterContainer,
   FooterWrap,
@@ -15,8 +15,10 @@ import {
   SocialLogo,
   WebsiteRights,
   Footerbg,
+  FooterLinkInitial,
 } from "./FooterElements";
 import { Height, Padding } from "@mui/icons-material";
+import { blue } from "@mui/material/colors";
 
 const Footer = () => {
   const handleClick = () => {
@@ -40,29 +42,34 @@ const Footer = () => {
         <FooterWrap>
           <FooterLinksContainer>
             <FooterLinksWrapper>
+              <FooterLinkItems className="socials">
+                <FooterLogo src={logo} />{" "}
+                <SocialLogo onClick={handleClick}>EmoWell</SocialLogo>
+              </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle style={{minWidth:"0px"}}>Our Contacts</FooterLinkTitle>
+                <FooterLinkTitle style={{minWidth:"0px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
                     <ListItemIcon style={{minWidth:"0px"}}>
                       {/* <LocationOn style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
-                    </ListItemIcon>
                     <lord-icon
                       style={{
                         Height: "25px",
                         width: "25px",
+                        // position: "absolute",
+
+                        // marginLeft: "-26px"
                       }}
                       src="https://cdn.lordicon.com/surcxhka.json"
                       trigger="hover"
                       stroke="bold"
-                      colors="primary:#ffffff,secondary:#ffffff"
-                    ></lord-icon>{" "}
+                      colors="primary:#ffffff,secondary:#ffffff"></lord-icon>{" "}
+                    </ListItemIcon>
                     <ListItemText primary="ABCDEF, Rohini, ND-India" />
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon style={{minWidth: "0px",}}>
+                    <ListItemIcon style={{minWidth:"0px"}}>
                       {/* <Phone style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
-                    </ListItemIcon>
                     <lord-icon
                       style={{
                         Height: "25px",
@@ -70,14 +77,13 @@ const Footer = () => {
                       }}
                       src="https://cdn.lordicon.com/srsgifqc.json"
                       trigger="hover"
-                      colors="primary:#ffffff"
-                    ></lord-icon>{" "}
+                      colors="primary:#ffffff"></lord-icon>{" "}
+                    </ListItemIcon>
                     <ListItemText primary="+012 345 67890" />
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon style={{minWidth: "0px",}}>
+                    <ListItemIcon style={{minWidth:"0px"}}>
                       {/* <Mail style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
-                    </ListItemIcon>
                     <lord-icon
                       style={{
                         Height: "25px",
@@ -85,15 +91,15 @@ const Footer = () => {
                       }}
                       src="https://cdn.lordicon.com/xtzvywzp.json"
                       trigger="hover"
-                      colors="primary:#ffffff"
-                    ></lord-icon>{" "}
+                      colors="primary:#ffffff"></lord-icon>{" "}
+                    </ListItemIcon>
                     <ListItemText primary="abcdef@gmail.com" />
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
 
               <FooterLinkItems>
-                <FooterLinkTitle>Quick Links</FooterLinkTitle>
+                <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>Q</span></FooterLinkInitial>uick Links</FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
                     <FooterLink onClick={() => scrollToSection("about")}>
@@ -108,8 +114,7 @@ const Footer = () => {
                   <ListItem>
                     <FooterLink
                       onClick={() => scrollToSection("featureSection")}
-                      className="footer-link"
-                    >
+                      className="footer-link">
                       <ListItemText primary="Services" />
                     </FooterLink>
                   </ListItem>
@@ -138,8 +143,9 @@ const Footer = () => {
               </FooterLinkItems>
 
               <FooterLinkItems>
-                <FooterLinkTitle>Business Hours</FooterLinkTitle>
-                <FooterLinkItems>
+                
+                <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>B</span></FooterLinkInitial>usiness Hours</FooterLinkTitle>
+                <FooterLinkItems style={{marginRight: "50px"}}>
                   <ListItem>
                     <ListItemText primary="Monday - Friday" />
                   </ListItem>
@@ -153,10 +159,7 @@ const Footer = () => {
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterLinksContainer>
-          <FooterLinkItems className="socials">
-            <FooterLogo src={logo} />{" "}
-            <SocialLogo onClick={handleClick}>EmoWell</SocialLogo>
-          </FooterLinkItems>
+          
           <WebsiteRights>
             EmoWell © {new Date().getFullYear()}&nbsp;All rights reserved.
           </WebsiteRights>
