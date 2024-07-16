@@ -34,6 +34,9 @@ export const FooterLinksWrapper = styled.div`
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
+    justify-items: start;
+    align-items: center;
+    padding: 10px
   }
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
@@ -43,6 +46,9 @@ export const FooterLinksWrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-content: space-around;
+      align-self : inherit;
+      align-content: center;
+      justify-content: center;
     }
     &:nth-child(2) {
       width: 100%;
