@@ -49,10 +49,16 @@ html {
     transform: translateY(-3px);
 }
 
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .faq-question {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+    flex: 1;
 }
 .faq-question:hover {
     color: rgb(1, 85, 1);
@@ -67,6 +73,8 @@ html {
     border-radius: 5px;
     line-height: 1.5;
     display: none;
+    overflow: hidden;
+    transition: max-height 0.3 ease;
 }
 
 .faq-answer.expanded {
@@ -80,6 +88,13 @@ html {
 
 .faq-container {
     margin-top: 80px; 
+}
+
+.faq-icon {
+    margin-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    
 }
 
 @media (max-width: 600px) {
