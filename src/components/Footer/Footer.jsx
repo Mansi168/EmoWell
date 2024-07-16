@@ -57,7 +57,6 @@ const Footer = () => {
                         Height: "25px",
                         width: "25px",
                         // position: "absolute",
-                        left: "30px",
 
                         // marginLeft: "-26px"
                       }}
@@ -75,7 +74,6 @@ const Footer = () => {
                       style={{
                         Height: "25px",
                         width: "25px",
-                        left: "30px",
                       }}
                       src="https://cdn.lordicon.com/srsgifqc.json"
                       trigger="hover"
@@ -90,7 +88,6 @@ const Footer = () => {
                       style={{
                         Height: "25px",
                         width: "25px",
-                        left: "30px",
                       }}
                       src="https://cdn.lordicon.com/xtzvywzp.json"
                       trigger="hover"
