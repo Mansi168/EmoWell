@@ -11,6 +11,7 @@ import ReadingArea from './Pages/ReadingArea';
 import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 import Assessment from './Pages/Assessment'
+import Services from './Pages/Services';
 // import Features from './components/Features'
 import FAQ from './components/FAQ';
 
@@ -31,6 +32,7 @@ function App() {
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
     <Route path='/assessment' element={<Assessment/>} />
+      <Route path='/services' element={<Services />} />
     <Route path='/privacy' element={<Privacy/>}/>
     <Route path='/faq' element={<FAQ/>}/>
     <Route path="/community" element={<CommunityPage/>}/>
