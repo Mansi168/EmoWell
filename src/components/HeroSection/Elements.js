@@ -15,6 +15,7 @@ export const HeroContainer = styled.div`
 
     @media screen and (max-width: 480px) {
         //height: 80vh;
+        margin-top:-8rem;
     }
     
     // :before{
@@ -119,21 +120,21 @@ font-style: normal;
 `
 export const HeroP = styled.p`
     width: 100%;
-    //max-width: 640px;
-    margin-top: 1rem;
+    max-width: 640px;
+    margin-top: 1.5rem;
     box-sizing: border-box;
     font-family: Georgia;
     font-style: normal;
-    font-weight: 400;
-    font-size: 1.3rem;
-    //line-height: 33px;
-    //text-align: left;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: left;
     background: indigo;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     /* text-transform:uppercase; */
-    text-align: center;
+    text-align:center;
 
     @media screen and (max-width: 1024px) {
         font-size: 20px;

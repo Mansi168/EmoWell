@@ -17,18 +17,14 @@ const HeroSection = () => {
         backgroundClip: "text",
         backgroundSize: "200%",
         backgroundPosition: "50% 50%",
-        display: "flex",
-        flexDirection: "column",
-        // gap:"-2rem",
-        alignItems: "center",
-        fontSize: "7rem",
-        marginBottom: "50px",
-        fontWeight: "bold",
-        // fontFamily: "Exo 2, sans-serif",
-        // fontFamily: "VT323, monospace",
+        alignItems : "center",
+        fontSize: "95px",
+        marginBottom:"50px",
+        fontWeight: "600",
+        fontFamily: "Exo 2, sans-serif",
         // color: "transparent",
         // margin: "0 !important",
-        textAlign: "center",
+        textAlign:"center",
         color: "#ffffe6",
         textShadow: "-4px 4px #ef3550," +
             "-8px 8px #f48fb1," +
@@ -39,15 +35,8 @@ const HeroSection = () => {
             "-28px 28px #eeff41," +
             "-32px 32px #f9a825," +
             "-36px 36px #ff5722;",
-        "@media screen and (max-width: 1400px)": {
-            fontSize: "5.5rem",
-        },
-        "@media screen and (max-width: 1000px)": {
-            fontSize: "4rem",
-            marginLeft: "1rem",
-        },
         "@media screen and (max-width: 480px)": {
-            fontSize: "3.7rem",
+            fontSize: "45px",
         },
     };
 
@@ -93,18 +82,19 @@ const HeroSection = () => {
                         display: "flex"
                     }}>
                         <HeroContainer>
-                            <HeroContent>
+
+                            <HeroContent
+                                style={{ marginTop: "10vh", marginLeft: "5vw" }}
+                            >
                                 <HeroH1
-                                    style={{color: '#164863', fontFamily: 'cursive', fontWeight: "100", width: "100%"}}
+                                    style={{color: '#164863',fontFamily:'cursive'}}
                                     data-aos="fade-up"
                                 >Wellness Begins Within</HeroH1>
-                                <Typography variant="h1" color="#ffffe6" sx={customH1Styles} data-aos="zoom-in">
-                                    Healthy Minds,
-                                    Happy Lives
+                                <Typography variant="h1" color="#ffffe6" sx={customH1Styles}data-aos="zoom-in" >
+                                    Healthy Minds, Happy Lives
                                 </Typography>
-                                <HeroP data-aos="fade-up" style={{textAlign: "center"}}>
-                                    We strive to create a community where every voice is heard, respected and
-                                    celebrated.
+                                <HeroP  data-aos="fade-up">
+                                    We strive to create a community where every voice is heard, respected and celebrated.
                                 </HeroP>
                             </HeroContent>
                         </HeroContainer>
