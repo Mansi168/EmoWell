@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(88, 74, 74);
 }
 
 .App-link {
-  color: #61dafb;
+  color: #01b10d;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +34,39 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.item {
+  margin: 0 10px; /* Optional: add some space between items */
+}
+/* App.css */
+.animated-text {
+  display: inline-block;
+  font-size: 95px;
+  font-family: 'Exo 2, sans-serif';
+  font-weight: 600;
+  color: #762626;
+  text-align: center;
+}
+
+.tilted {
+  animation: tilt 2s ease-in-out infinite;
+  display: inline-block;
+  color: #9e2828;
+  text-shadow: -1px 1px 0px #ef3550, -2px 2px 0px #f48fb1, -3px 3px 0px #7e57c2, -4px 4px 0px #2196f3, -5px 5px 0px #26c6da, -6px 6px 0px #43a047, -7px 7px 0px #eeff41, -8px 8px 0px #f9a825, -9px 9px 0px #ff5722;
+}
+
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
   }
 }
