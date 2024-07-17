@@ -129,6 +129,11 @@ const Footer = () => {
                     </FooterLink>
                   </ListItem>
                   <ListItem>
+                    <FooterLink to="/terms">
+                      <ListItemText primary="Terms And Conditions" />
+                    </FooterLink>
+                  </ListItem>
+                  <ListItem>
                     <FooterLink to="/community">
                       <ListItemText primary="Community" />
                     </FooterLink>
