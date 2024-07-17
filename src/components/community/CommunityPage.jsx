@@ -68,7 +68,7 @@ const CommunityPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="community-page">
+      <div className="community-page" data-aos="fade down">
         {loading ? (
           <div className="loading-spinner">
             <ClipLoader color="#318f5f" loading={loading} css={override} size={150} />

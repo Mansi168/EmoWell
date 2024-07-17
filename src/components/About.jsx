@@ -122,25 +122,35 @@ const FlexContainer = styled.div`
 `;
 // Convert the code
 const CampContent = () => {
-    return (
-        <Container id="about">
-            <AboutContainer className="hide-scrollbar">
-                {/*<CampSite*/}
-                {/*    backgroundImage={stress}*/}
-                {/*    title="About Us"*/}
-                {/*    data-aos="fade-up"*/}
-                {/*    data-aos-delay="100"*/}
-                {/*/>*/}
+        // <Container id="about">
+        //     <AboutContainer className="hide-scrollbar">
+        //         {/*<CampSite*/}
+        //         {/*    backgroundImage={stress}*/}
+        //         {/*    title="About Us"*/}
+        //         {/*    data-aos="fade-up"*/}
+        //         {/*    data-aos-delay="100"*/}
+        //         {/*/>*/}
+        //
+        //         <ImageContainer
+        //             title="About Us"
+        //             data-aos="fade-up"
+        //             data-aos-delay="100"
+        //         >
+        //             <img src={stress}/>
+        //         </ImageContainer>
 
-                <ImageContainer
-                    title="About Us"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                >
-                    <img src={stress}/>
-                </ImageContainer>
 
-                {/* <CampSite
+  return (
+    <Container id="about" data-aos="fade down">
+    <AboutContainer className="hide-scrollbar" data-aos="fade down">
+      <ImageContainer
+        title="About Us"
+        data-aos="fade-up"
+        data-aos-delay="100">
+            <img src={stress}/>
+      </ImageContainer>
+
+      {/* <CampSite
         backgroundImage="img-1.png"
         title="Mountain View Camp"
         subtitle="Somewhere in the Wilderness"
