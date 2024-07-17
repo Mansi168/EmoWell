@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import logo from "../../assets/logo.png";
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   FooterContainer,
   FooterWrap,
@@ -21,18 +21,23 @@ import { Height, Padding } from "@mui/icons-material";
 import { blue } from "@mui/material/colors";
 
 const Footer = () => {
-  const handleClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  const navigate = useNavigate();
+  const handleClick = (sectionId) => {
+    navigate('/'); // Navigate to the home page
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); // Scroll to top
+      if (sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" }); // Scroll to section if sectionId is provided
+        }
+      }
+    }, 100); // Delay to ensure navigation occurs before scrolling
   };
+
   const [setIsActive] = useState(false);
   const removeActive = () => {
     setIsActive(false);
-  };
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   return (
@@ -44,7 +49,7 @@ const Footer = () => {
             <FooterLinksWrapper>
               <FooterLinkItems className="socials">
                 <FooterLogo src={logo} />{" "}
-                <SocialLogo onClick={handleClick}>EmoWell</SocialLogo>
+                <SocialLogo onClick={() => handleClick()}>EmoWell</SocialLogo>
               </FooterLinkItems>
               <FooterLinkItems>
                 <FooterLinkTitle style={{minWidth:"0px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
@@ -102,48 +107,39 @@ const Footer = () => {
                 <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>Q</span></FooterLinkInitial>uick Links</FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
-                    <FooterLink onClick={() => scrollToSection("about")}>
+                    <FooterLink to="/#about" onClick={() => handleClick("about")}>
                       <ListItemText primary="About" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/contact">
+                    <FooterLink to="/contact" onClick={() => handleClick("contact")}>
                       <ListItemText primary="Contact" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink
-                      onClick={() => scrollToSection("featureSection")}
-                      className="footer-link">
+                    <FooterLink to="/services" onClick={() => handleClick("featureSection")} className="footer-link">
                       <ListItemText primary="Services" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/faq">
+                    <FooterLink to="/faq"  onClick={() => handleClick("faq")}>
                       <ListItemText primary="FAQs" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/privacy">
+                    <FooterLink to="/privacy"  onClick={() => handleClick("privacy")}>
                       <ListItemText primary="Privacy and Policy" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/community">
+                    <FooterLink to="/community"  onClick={() => handleClick("community")}>
                       <ListItemText primary="Community" />
                     </FooterLink>
                   </ListItem>
-
-                  {/* <ListItem>
-      <FooterLink to="/donate" className="footer-link">
-        <ListItemText primary="Support and Donate" />
-      </FooterLink>
-    </ListItem> */}
                 </FooterLinkItems>
               </FooterLinkItems>
 
               <FooterLinkItems>
-                
                 <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>B</span></FooterLinkInitial>usiness Hours</FooterLinkTitle>
                 <FooterLinkItems style={{marginRight: "50px"}}>
                   <ListItem>
