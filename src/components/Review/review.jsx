@@ -51,7 +51,7 @@ const ReviewPage = () => {
 
   return (
     <section>
-      <div className="review-container">
+      <div className="review-container" data-aos="fade down">
         <div className="reviewInfo">
           <div>
             {/* Review info section */}
