@@ -101,7 +101,7 @@ const Navbar = () => {
             </NavLogo>
           </Link>
           </NavImg> */}
-          <NavImg data-aos="fade-down">
+          <NavImg>
             <img src={logo}
               alt="favicon"
               height="60"
@@ -115,7 +115,7 @@ const Navbar = () => {
           <MobileIcon onClick={toggle}>
             {isOpen ? <FaTimes /> : <FaBars />} {/* Close icon when open */}
           </MobileIcon>
-          <NavMenu isOpen={isOpen} data-aos="fade-down">
+          <NavMenu isOpen={isOpen}>
             <Navitem>
               <NavLinks to="/" onClick={handleLogoClick}>
                 Home

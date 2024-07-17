@@ -15,7 +15,7 @@ const FAQ = () => {
   return (
     <>
       <Navbar />
-      <div className="faq-container">
+      <div className="faq-container" data-aos="fade down">
         <h1>Frequently Asked Questions</h1>
         <ul>
           {faqs.map((faq, index) => (

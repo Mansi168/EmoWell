@@ -7,7 +7,7 @@ const PrivacyPolicy = () =>{
     
 
     return(
-        <section>
+        <section data-aos="fade down">
             <div className="heading">
                 <div className="title">
                     <h1>EmoWell Customer Privacy Policy</h1>

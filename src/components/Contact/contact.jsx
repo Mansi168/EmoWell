@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <section>
-      <div className="contact-container">
+      <div className="contact-container" data-aos="fade down">
         <div className="contactInfo">
           <div>
             {/* Contact info section */}

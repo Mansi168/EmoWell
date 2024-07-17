@@ -110,7 +110,7 @@ const FeaturesSection = () => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
 
   return (
-    <Section id="featureSection">
+    <Section id="featureSection" data-aos="fade down">
       <Title data-aos="fade-up">Our Features</Title>
       <Container>
         <DecorationContainer>
