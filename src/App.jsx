@@ -14,7 +14,7 @@ import Assessment from './Pages/Assessment'
 import Services from './Pages/Services';
 // import Features from './components/Features'
 import FAQ from './components/FAQ';
-
+import TermsAndConditions from "./components/TermsAndConditions";
 import RouteNotFound from './Pages/RouteNotFound';
 import CommunityPage from "./components/community/CommunityPage";
 
@@ -36,6 +36,7 @@ function App() {
     <Route path='/privacy' element={<Privacy/>}/>
     <Route path='/faq' element={<FAQ/>}/>
     <Route path="/community" element={<CommunityPage/>}/>
+    <Route path="/terms" element={<TermsAndConditions/>}/>
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
