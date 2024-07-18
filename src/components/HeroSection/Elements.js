@@ -5,18 +5,19 @@ import {MdArrowForward, MdKeyboardArrowRight} from 'react-icons/md'
 export const HeroContainer = styled.div`
     width: 100%;
     display: flex;
+    border : "10px solid";
     justify-content: center;
-    align-items: left;
+    align-items: center;
     text-align: left; /* Adjusted to align text to the left */
-    height: 120vh;
-    position: relative;
-    overflow: hidden;
+    //height: 120vh;
+    //position: relative;
+    //overflow: hidden;
 
     @media screen and (max-width: 480px) {
-        height: 80vh;
+        //height: 80vh;
+        margin-top:-8rem;
     }
-
-
+    
     // :before{
     //     content: '';
     //     position: absolute;
@@ -42,7 +43,6 @@ export const HeroBg = styled.div`
     @media screen and (max-width: 480px){
         background: #000;
     }
-   
 `
 
 export const Imgbg = styled.div`
@@ -50,26 +50,24 @@ export const Imgbg = styled.div`
     margin-right: 0px;
     top: -770.06px;
     position: absolute;
-
     left: 154.28px;
-
-    
-   
 `
 
 export const HeroContent = styled.div`
     z-index: 3;
-    width: auto;
-    position: absolute;
-    padding: 8px 24px;
+    height:100%;
+    max-width: 1200px;
+    padding: 2rem;
+    //position: absolute;
     display: flex;
+    justify-content:center;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
 `
 
 export const HeroH1 = styled.h1`
   text-align:center;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
   font-family: 'Exo 2', sans-serif;
   color: #00008B;
   font-style: normal;
@@ -77,36 +75,40 @@ export const HeroH1 = styled.h1`
   line-height: normal;
   font-weight: 600;
   color: white;
-  position: relative;
-  display: inline-block;
+  //position: relative;
+  //display: inline-block;
 
-  &:before {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 100%;
-    shape-outside: ellipse(50% 100% at 0% 50%);
-    float: left;
-  }
+  //&:before {
+  //  content: '';
+  //  display: block;
+  //  width: 50%;
+  //  height: 100%;
+  //  shape-outside: ellipse(50% 100% at 0% 50%);
+  //  float: left;
+  //}
 
-  &:after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 100%;
-    shape-outside: ellipse(50% 100% at 100% 50%);
-    float: right;
-  }
+  //&:after {
+  //  content: '';
+  //  display: block;
+  //  width: 50%;
+  //  height: 100%;
+  //  shape-outside: ellipse(50% 100% at 100% 50%);
+  //  float: right;
+  //}
 
-  @media screen and (max-width: 768px) {
-    font-size: 50px;
+  @media screen and (max-width: 1200px) {
+    font-size: 25px;
     font-weight: 600;
   }
-
-  @media screen and (max-width: 480px) {
-    font-size: 43px;
-    font-weight: 600;
-  }
+  //@media screen and (max-width: 768px) {
+  //    font-size: 50px;
+  //    font-weight: 600;
+  //}
+  //    
+  //@media screen and (max-width: 480px) {
+  //  font-size: 43px;
+  //  font-weight: 600;
+  //}
 `;
 
 
@@ -117,37 +119,37 @@ export const HeroD = styled.span`
 font-style: normal;
 `
 export const HeroP = styled.p`
-  width: 100%;
-  max-width: 640px;
-  margin-top: 1.5rem;
-  box-sizing: border-box;
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 33px;
-  text-align: left;
-  background: indigo;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
- /* text-transform:uppercase; */
- text-align:center;
+    width: 100%;
+    max-width: 640px;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: left;
+    background: indigo;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-transform:uppercase; */
+    text-align:center;
 
-  @media screen and (max-width: 1024px) {
-    font-size: 20px;
-    line-height: 26px;
-  }
+    @media screen and (max-width: 1024px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
 
-  @media screen and (max-width: 768px) {
-    font-size: 18px;
-    line-height: 24px;
-  }
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 
-  @media screen and (max-width: 480px) {
-    font-size: 18px;
-    line-height: 22px;
-  }
+    @media screen and (max-width: 480px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
 `;
 
 
