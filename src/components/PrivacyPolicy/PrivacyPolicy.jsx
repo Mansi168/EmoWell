@@ -2,6 +2,14 @@ import './privacypolicy.css';
 import { privacyContext, policyContext } from './constant';
 import { Link } from 'react-router-dom'
 import {useState} from "react";
+import styled from "styled-components";
+
+const CardDiv = styled.div`
+    background-color: #30AF5B;
+    &:hover{
+        background-color: #3cb765; 
+    }
+`
 
 const PrivacyPolicy = () =>{
     const[toggle, setToggle ] = useState({});
@@ -25,22 +33,26 @@ const PrivacyPolicy = () =>{
             </div>
 
             <div className="policy">
-                <div className={"d-flex gap-3 flex-column"}>
+                <div className={"d-flex gap-3  flex-column"}>
                 {
+                    // mapping
                     policyContext.map((context,index)=>(
                         <div key={index} className={"m-0"}>
-                            <div className={"py-3 px-4 m-0 bg-light text-start text-dark border border-dark d-flex align-items-center"} style={{borderRadius: "0",cursor:"default"}}>
-                                <h2 className={"text-dark p-0 m-0"}>{context.title}</h2>
+                            <CardDiv
+                            className={"py-3 px-4 m-0 text-white text-start d-flex align-items-center rounded"}
+                                style={{borderRadius: "0",cursor:"pointer", userSelect:"none"}}
+                                onClick={()=>handleToggle(index)}
+                            >
+                                <h2 className={"p-0 m-0"}>{context.title}</h2>
                                 <h1
                                     className={"m-0 p-0 ms-auto px-3 "} style={{cursor: "pointer", userSelect:"none"}}
-                                    onClick={()=>handleToggle(index)}
                                 >
-                                    {toggle[index] ? "-" : "x"}
+                                    {toggle[index] ? "-" : "+"}
                                 </h1>
-                            </div>
-                            <div className={`bg-light m-0 mt-1 p-4 mb-3 shadow-sm border border-primary ${toggle[index]? "d-block" : "d-none"} `} style={{cursor:"default"}}>
-                                <p className={"text-dark"} style={{fontSize:"20px"}} >{context.para1}</p>
-                                <p className={"text-dark mt-2"} style={{fontSize:"20px"}} >{context.para2}</p>
+                            </CardDiv>
+                            <div className={`text-white p-4 mb-3 shadow-sm rounded ${toggle[index]? "d-block" : "d-none"} `} style={{cursor:"default", backgroundColor:"#24964a",margin:"2px 0 0 0"}}>
+                                <p className={""} style={{fontSize:"20px"}} >{context.para1}</p>
+                                <p className={"mt-2"} style={{fontSize:"20px"}} >{context.para2}</p>
                             </div>
                         </div>
                     ))
