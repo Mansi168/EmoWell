@@ -52,7 +52,7 @@ const Footer = () => {
                 <SocialLogo onClick={() => handleClick()}>EmoWell</SocialLogo>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle style={{minWidth:"0px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
+                <FooterLinkTitle style={{minWidth:"0px", marginLeft:"-50px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
                     <ListItemIcon style={{minWidth:"0px"}}>
