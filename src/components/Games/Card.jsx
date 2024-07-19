@@ -3,14 +3,13 @@ import { Button } from "../ButtonElement";
 import PropTypes from 'prop-types';
 
 const buttonStyles = {
-    width: "70%",
+    width: "60%",
     alignItems: "center", // Corrected spelling of alignItems
     marginBottom: "0",
     textDecoration: "none", // Corrected capitalization of textDecoration
     backgroundColor: "#12263f",
     color: "#ffffff",
-    cursor: "pointer",
-    marginLeft: "50px",
+    cursor: "pointer",  
     textSize: "20px",   
 };
 
@@ -33,6 +32,7 @@ function Card(props) {
     };
 
     return (
+        <div className="outerCard">
         <div className="cardproject">
             <img className="cardimage" src={props.image} alt="image" />
 
@@ -52,6 +52,7 @@ function Card(props) {
             <i className="fas fa-map-marker-alt"></i>
                 <p>Online</p>
             </div> */}
+        </div>
         </div>
     );
 }
