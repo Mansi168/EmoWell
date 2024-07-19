@@ -1,10 +1,14 @@
 import './privacypolicy.css';
 import { privacyContext, policyContext } from './constant';
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 
 const PrivacyPolicy = () =>{
-
     
+    useEffect(() => {
+        //To  Scroll to the top of the page when the component is mounted
+        window.scrollTo(0, 0);
+    }, []);
 
     return(
         <section data-aos="fade down">
