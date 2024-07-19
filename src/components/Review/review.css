@@ -1,11 +1,22 @@
-
-section
-{
+body{
+    overflow-x: hidden;
+}
+.mainouter{
+    width: 100vw;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
+    
+}
+section
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; 
     height:auto;
+    width: 1200px;
 }
 
 
@@ -234,9 +245,10 @@ section
 {
     .review-container
     {
-        width: 90%;
+        width: 100%;
         min-width: auto;
-        margin: 90px;
+        display: flex;
+        align-items: center;
         box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     }
 
@@ -256,7 +268,7 @@ section
         padding-left: 0;
         margin-left: 0;
         padding: 40px;
-        height: 550px;
+        height: 100%;
         box-shadow: none;
         border-radius: 0px;
     }
@@ -286,9 +298,7 @@ section
     .review-container .reviewForm
     {
         width: 100%;
-      
         border-radius: 0px;
-        margin-top: 7rem;
     }
 
     .review-container .reviewInfo

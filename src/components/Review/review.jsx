@@ -50,6 +50,7 @@ const ReviewPage = () => {
   };
 
   return (
+    <div className='mainouter'>
     <section>
       <div className="review-container" data-aos="fade down">
         <div className="reviewInfo">
@@ -90,6 +91,7 @@ const ReviewPage = () => {
       </div>
       <ToastContainer />
     </section>
+    </div>
   );
 };
 export default ReviewPage;
