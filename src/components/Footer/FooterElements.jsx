@@ -186,3 +186,15 @@ export const WebsiteRights = styled.small`
   color: lime;
   font-size: 16px;
 `;
+
+export const ContactInfo = () => {
+  return (
+    <div>
+      <ListItem>
+        <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItemText primary="+012 345 67890" />
+        </a>
+      </ListItem>
+    </div>
+  );
+};
