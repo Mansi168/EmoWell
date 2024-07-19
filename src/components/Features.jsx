@@ -85,6 +85,9 @@ const DecorationData = styled.div`
   position: relative;
   overflow: hidden;
 
+  &:hover{
+  scale:1.04
+  }
   &:before {
     content: "";
     position: absolute;
