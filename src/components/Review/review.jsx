@@ -1,95 +1,142 @@
-import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react';
 import './review.css';
 
-const ReviewPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    rating: '',
-    review: ''
-  });
+const FeedbackModal = () => {
+  const [rating, setRating] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [feedback, setFeedback] = useState("");
+  const [customFeedback, setCustomFeedback] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [feedbackOption, setFeedbackOption] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleFeedbackOptionChange = (e) => {
+    const selectedOption = e.target.value;
+    setFeedbackOption(selectedOption);
+    if (selectedOption === "Other") {
+      setCustomFeedback("");
+    } else {
+      setFeedback(selectedOption);
+    }
+  };
+
+  const handleRatingChange = (value) => {
+    setRating(value === rating ? null : value);
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleFeedbackChange = (e) => {
+    setFeedback(e.target.value);
+  };
+
+  const handleCustomFeedbackChange = (e) => {
+    setCustomFeedback(e.target.value);
+    setFeedback(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let errors = [];
 
-    if (!formData.name) {
-      errors.push('Name is required.');
-    }
-    if (!emailRegex.test(formData.email)) {
-      errors.push('Invalid Email Address.');
-    }
-    if (!formData.rating || isNaN(formData.rating) || formData.rating < 1 || formData.rating > 5) {
-      errors.push('Rating must be a number between 1 and 5.');
-    }
-    if (!formData.review) {
-      errors.push('Review is required.');
-    }
+    setIsSubmitted(true);
+    alert("Thank you for your feedback!");
 
-    if (errors.length > 0) {
-      errors.forEach(error => toast.error(error));
-      return;
-    }
-
-    toast.success("Thank you for your review!");
-
-    // Clear the form fields
-    setFormData({
-      name: '',
-      email: '',
-      rating: '',
-      review: ''
-    });
+    // Reset form fields
+    setRating(null);
+    setName("");
+    setEmail("");
+    setFeedback("");
+    setCustomFeedback("");
+    setFeedbackOption("");
   };
 
   return (
-    <section>
-      <div className="review-container" data-aos="fade down">
-        <div className="reviewInfo">
-          <div>
-            {/* Review info section */}
-          </div>
-        </div>
+    <div className="feedback-wrapper">
+      <div className="feedback-form">
         <div>
-        
-        </div>
-        <div className="reviewForm">
-          <p style={{fontSize: '2rem', color: '#0f3959', fontWeight: '500'}}>Loved our site?</p>
-          <h2>Leave a Review</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="formBox">
-              <div className="inputBox w100">
-              <label>Name</label>
-                <input placeholder="Manav Malhotra" type="text" name="name" value={formData.name} onChange={handleChange} required />
-              </div>
-              <div className="inputBox w100">
-              <label>Email Address</label>
-                <input placeholder="manav@example.com" type="email" name="email" value={formData.email} onChange={handleChange} required />
-              </div>
-              <div className="inputBox w100">
-                <input type="number" name="rating" value={formData.rating} onChange={handleChange} required />
-                <span>Rating (1-5)</span>
-              </div>
-              <div className="inputBox w100">
-                <label>Your Feedback</label>
-                <textarea placeholder="Tell us what you loved about our site" name="review" value={formData.review} onChange={handleChange} required />
-              </div>
-              <div className="inputBox w100">
-                <input type="submit" value="Submit Review" />
-              </div>
+          <h2>Your Insights Matter to Us !</h2>
+         <hr />
+<p className="para">
+    EmoWell is here to assist with your emotional wellbeing. <br />
+    Share your feedback and suggestions to help us enhance our service.
+</p>
+
+          <div>
+            <p className="rate-para">
+              Rate Your Experience
+            </p>
+            <div className="rating-container">
+              {[1, 2, 3, 4, 5].map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  className={value <= rating ? "active" : ""}
+                  onClick={() => handleRatingChange(value)}
+                >
+                  {value <= rating ? "★" : "☆"}
+                </button>
+              ))}
             </div>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleNameChange}
+              placeholder="Type your name here..."
+              required
+            />
+            <label htmlFor="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleEmailChange}
+              placeholder="Enter your email..."
+              required
+            />
+            <label htmlFor="feedback-option">Feedback</label>
+            <select
+              id="feedback-option"
+              name="feedback-option"
+              value={feedbackOption}
+              onChange={handleFeedbackOptionChange}
+              required
+            >
+              <option value="" disabled>Select your feedback</option>
+              <option value="Excellent experience">Excellent experience</option>
+              <option value="Good, but could be improved">Good, but could be improved</option>
+              <option value="Average experience">Average experience</option>
+              <option value="Poor experience">Poor experience</option>
+              <option value="Other">Other</option>
+            </select>
+            {feedbackOption === "Other" && (
+              <textarea
+                id="custom-feedback"
+                name="custom-feedback"
+                rows="4"
+                value={customFeedback}
+                onChange={handleCustomFeedbackChange}
+                placeholder="Let us know your thoughts, suggestions, or concerns..."
+                required
+              ></textarea>
+            )}
+            <button type="submit">Submit Feedback</button>
           </form>
         </div>
       </div>
-      <ToastContainer />
-    </section>
+    </div>
   );
 };
-export default ReviewPage;
+
+export default FeedbackModal;
