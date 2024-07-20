@@ -143,13 +143,13 @@ const Footer = () => {
                 <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>B</span></FooterLinkInitial>usiness Hours</FooterLinkTitle>
                 <FooterLinkItems style={{marginRight: "50px"}}>
                   <ListItem>
-                    <ListItemText primary="Monday - Friday" />
+                    <ListItemText primary="Monday - Friday : 9am - 5pm" />
                   </ListItem>
                   <ListItem>
-                    <ListItemText primary="Saturday" />
+                    <ListItemText primary="Saturday : 9am - 12pm" />
                   </ListItem>
                   <ListItem>
-                    <ListItemText primary="Sunday" />
+                    <ListItemText primary="Sunday : Closed" />
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
