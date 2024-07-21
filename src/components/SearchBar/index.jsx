@@ -1,6 +1,5 @@
-
 import './styles.css';
-
+import { BsSearch } from "react-icons/bs";
 // eslint-disable-next-line react/prop-types
 const SearchBar = ({ formSubmit, value, handleSearchKey, clearSearch }) => (
   <div className='searchBar-wrap'>
@@ -12,7 +11,7 @@ const SearchBar = ({ formSubmit, value, handleSearchKey, clearSearch }) => (
         onChange={handleSearchKey}
       />
       {value && <span onClick={clearSearch}>X</span>}
-      <button>Go</button>
+      <button><BsSearch fontSize={20}/></button>
     </form>
   </div>
 );
