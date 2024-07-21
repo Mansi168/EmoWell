@@ -78,7 +78,7 @@ const Footer = () => {
                         colors="primary:#ffffff,secondary:#ffffff"
                       ></lord-icon>{" "}
                     </ListItemIcon>
-                    <ListItemText primary="ABCDEF, Rohini, ND-India" />
+                    <ListItemText primary="ABCDEF, Rohini, ND-India" className="footer-link" />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon style={{ minWidth: "0px" }}>
@@ -94,7 +94,7 @@ const Footer = () => {
                       ></lord-icon>{" "}
                     </ListItemIcon>
                     <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <ListItemText primary="+012 345 67890" />
+                      <ListItemText primary="+012 345 67890" className="footer-link"/>
                     </a>
                   </ListItem>
                   <ListItem>
@@ -111,7 +111,7 @@ const Footer = () => {
                       ></lord-icon>{" "}
                     </ListItemIcon>
                     <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <ListItemText primary="abcdef@gmail.com" />
+                      <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
                     </a>
                   </ListItem>
                 </FooterLinkItems>
@@ -191,13 +191,13 @@ const Footer = () => {
                 </FooterLinkTitle>
                 <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
-                    <ListItemText primary="Monday - Friday" />
+                    <ListItemText primary="Monday - Friday" className="footer-link" />
                   </ListItem>
                   <ListItem>
-                    <ListItemText primary="Saturday" />
+                    <ListItemText primary="Saturday" className="footer-link" />
                   </ListItem>
                   <ListItem>
-                    <ListItemText primary="Sunday" />
+                    <ListItemText primary="Sunday" className="footer-link"/>
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
