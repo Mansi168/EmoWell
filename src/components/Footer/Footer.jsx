@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import logo from "../../assets/logo.png";
+import './Footer.css';
+
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import {
   FooterContainer,
   FooterWrap,
@@ -23,7 +25,7 @@ import { blue } from "@mui/material/colors";
 const Footer = () => {
   const navigate = useNavigate();
   const handleClick = (sectionId) => {
-    navigate('/'); // Navigate to the home page
+    navigate("/"); // Navigate to the home page
     setTimeout(() => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); // Scroll to top
       if (sectionId) {
@@ -52,53 +54,61 @@ const Footer = () => {
                 <SocialLogo onClick={() => handleClick()}>EmoWell</SocialLogo>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle style={{minWidth:"0px", marginLeft:"-50px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
+                <FooterLinkTitle style={{ minWidth: "0px" }}>
+                  <FooterLinkInitial>
+                    <span style={{ fontSize: "38px" }}>O</span>
+                  </FooterLinkInitial>
+                  ur Contacts
+                </FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
-                    <ListItemIcon style={{minWidth:"0px"}}>
+                    <ListItemIcon style={{ minWidth: "0px" }}>
                       {/* <LocationOn style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
-                    <lord-icon
-                      style={{
-                        Height: "25px",
-                        width: "25px",
-                        // position: "absolute",
+                      <lord-icon
+                        style={{
+                          Height: "25px",
+                          width: "25px",
+                          // position: "absolute",
 
-                        // marginLeft: "-26px"
-                      }}
-                      src="https://cdn.lordicon.com/surcxhka.json"
-                      trigger="hover"
-                      stroke="bold"
-                      colors="primary:#ffffff,secondary:#ffffff"></lord-icon>{" "}
+                          // marginLeft: "-26px"
+                        }}
+                        src="https://cdn.lordicon.com/surcxhka.json"
+                        trigger="hover"
+                        stroke="bold"
+                        colors="primary:#ffffff,secondary:#ffffff"
+                      ></lord-icon>{" "}
                     </ListItemIcon>
                     <ListItemText primary="ABCDEF, Rohini, ND-India" />
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon style={{minWidth:"0px"}}>
+                    <ListItemIcon style={{ minWidth: "0px" }}>
                       {/* <Phone style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
-                    <lord-icon
-                      style={{
-                        Height: "25px",
-                        width: "25px",
-                      }}
-                      src="https://cdn.lordicon.com/srsgifqc.json"
-                      trigger="hover"
-                      colors="primary:#ffffff"></lord-icon>{" "}
+                      <lord-icon
+                        style={{
+                          Height: "25px",
+                          width: "25px",
+                        }}
+                        src="https://cdn.lordicon.com/srsgifqc.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                      ></lord-icon>{" "}
                     </ListItemIcon>
                     <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="+012 345 67890" />
                     </a>
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon style={{minWidth:"0px"}}>
+                    <ListItemIcon style={{ minWidth: "0px" }}>
                       {/* <Mail style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
-                    <lord-icon
-                      style={{
-                        Height: "25px",
-                        width: "25px",
-                      }}
-                      src="https://cdn.lordicon.com/xtzvywzp.json"
-                      trigger="hover"
-                      colors="primary:#ffffff"></lord-icon>{" "}
+                      <lord-icon
+                        style={{
+                          Height: "25px",
+                          width: "25px",
+                        }}
+                        src="https://cdn.lordicon.com/xtzvywzp.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                      ></lord-icon>{" "}
                     </ListItemIcon>
                     <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="abcdef@gmail.com" />
@@ -108,35 +118,64 @@ const Footer = () => {
               </FooterLinkItems>
 
               <FooterLinkItems>
-                <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>Q</span></FooterLinkInitial>uick Links</FooterLinkTitle>
+                <FooterLinkTitle>
+                  <FooterLinkInitial>
+                    <span style={{ fontSize: "38px" }}>Q</span>
+                  </FooterLinkInitial>
+                  uick Links
+                </FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
-                    <FooterLink to="/#about" onClick={() => handleClick("about")}>
+                    <FooterLink
+                      to="/#about"
+                      onClick={() => handleClick("about")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="About" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/contact" onClick={() => handleClick("contact")}>
+                    <FooterLink
+                      to="/contact"
+                      onClick={() => handleClick("contact")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="Contact" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/services" onClick={() => handleClick("featureSection")} className="footer-link">
+                    <FooterLink
+                      to="/services"
+                      onClick={() => handleClick("featureSection")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="Services" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/faq"  onClick={() => handleClick("faq")}>
+                    <FooterLink
+                      to="/faq"
+                      onClick={() => handleClick("faq")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="FAQs" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/privacy"  onClick={() => handleClick("privacy")}>
+                    <FooterLink
+                      to="/privacy"
+                      onClick={() => handleClick("privacy")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="Privacy and Policy" />
                     </FooterLink>
                   </ListItem>
                   <ListItem>
-                    <FooterLink to="/community"  onClick={() => handleClick("community")}>
+                    <FooterLink
+                      to="/community"
+                      onClick={() => handleClick("community")}
+                      className="footer-link"
+                    >
                       <ListItemText primary="Community" />
                     </FooterLink>
                   </ListItem>
@@ -144,8 +183,13 @@ const Footer = () => {
               </FooterLinkItems>
 
               <FooterLinkItems>
-                <FooterLinkTitle><FooterLinkInitial><span style={{fontSize: "38px"}}>B</span></FooterLinkInitial>usiness Hours</FooterLinkTitle>
-                <FooterLinkItems style={{marginRight: "50px"}}>
+                <FooterLinkTitle>
+                  <FooterLinkInitial>
+                    <span style={{ fontSize: "38px" }}>B</span>
+                  </FooterLinkInitial>
+                  usiness Hours
+                </FooterLinkTitle>
+                <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
                     <ListItemText primary="Monday - Friday" />
                   </ListItem>
@@ -159,7 +203,7 @@ const Footer = () => {
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterLinksContainer>
-          
+
           <WebsiteRights>
             EmoWell © {new Date().getFullYear()}&nbsp;All rights reserved.
           </WebsiteRights>

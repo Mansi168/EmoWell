@@ -1,0 +1,27 @@
+.footer-link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer-link:hover {
+    color: #00FF00;
+  }
+  
+  .footer-link:hover::after {
+    width: 100%;
+    background-color: #00FF00;
+  }
+  
