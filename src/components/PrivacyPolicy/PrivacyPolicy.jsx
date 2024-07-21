@@ -1,7 +1,7 @@
 import './privacypolicy.css';
 import { privacyContext, policyContext } from './constant';
 import { Link } from 'react-router-dom'
-import {useState} from "react";
+import { useState, useEffect } from 'react';
 import styled from "styled-components";
 
 const CardDiv = styled.div`
@@ -20,7 +20,10 @@ const PrivacyPolicy = () =>{
             [index] : !prevState[index]
         }));
     };
-
+useEffect(() => {
+        // To scroll to the top of the page when the component is mounted
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <section data-aos="fade down">
             <div className="heading">
