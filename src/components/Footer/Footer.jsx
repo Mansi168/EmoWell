@@ -52,7 +52,7 @@ const Footer = () => {
                 <SocialLogo onClick={() => handleClick()}>EmoWell</SocialLogo>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle style={{minWidth:"0px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
+                <FooterLinkTitle style={{minWidth:"0px", marginLeft:"-50px"}}><FooterLinkInitial><span style={{fontSize: "38px"}}>O</span></FooterLinkInitial>ur Contacts</FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
                     <ListItemIcon style={{minWidth:"0px"}}>
@@ -84,7 +84,9 @@ const Footer = () => {
                       trigger="hover"
                       colors="primary:#ffffff"></lord-icon>{" "}
                     </ListItemIcon>
-                    <ListItemText primary="+012 345 67890" />
+                    <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <ListItemText primary="+012 345 67890" />
+                    </a>
                   </ListItem>
                   <ListItem>
                     <ListItemIcon style={{minWidth:"0px"}}>
@@ -98,7 +100,9 @@ const Footer = () => {
                       trigger="hover"
                       colors="primary:#ffffff"></lord-icon>{" "}
                     </ListItemIcon>
-                    <ListItemText primary="abcdef@gmail.com" />
+                    <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <ListItemText primary="abcdef@gmail.com" />
+                    </a>
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
