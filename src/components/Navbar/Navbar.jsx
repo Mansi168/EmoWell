@@ -13,6 +13,7 @@ import {
   Dropdown,
   Dropdowncontent,ButtonDropdown,
 } from "./NavbarElements";
+import { Link } from "react-router-dom";
 
 // import Dropdown from 'rsuite/Dropdown'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -102,10 +103,13 @@ const Navbar = () => {
           </Link>
           </NavImg> */}
           <NavImg>
+           <Link to="/">
             <img src={logo}
               alt="favicon"
               height="60"
+              
             />
+            </Link>
             <NavLogo to="/"  onClick={handleLogoClick}> EmoWell
             <SubLogo>EMBRACE Wellness</SubLogo>
             </NavLogo>

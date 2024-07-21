@@ -1,3 +1,4 @@
+
 :root {
     --color-1: rgb(0, 150, 136); 
     --color-2: rgb(200, 230, 201); 
@@ -5,6 +6,7 @@
     --color-4: rgb(0, 121, 107);
     --color-5: rgb(77, 182, 172);
     --color-6: rgb(0, 96, 83); 
+
 }
 
 
@@ -210,6 +212,7 @@ select#feedback-option {
     background-color: #fff;
     margin-bottom: 10px;
     transition: border-color 0.3s ease;
+
 }
 
 select#feedback-option:focus {

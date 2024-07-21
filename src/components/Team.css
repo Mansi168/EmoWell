@@ -1,0 +1,32 @@
+.leftLink{
+    margin-left: -10%;
+    color: rgb(38, 148, 34);
+    margin-right: 10%;
+    font-size: 20px;
+}
+
+.Social-link{
+    margin-left: 8px;
+    transition: transform 0.55s;
+    font-size: 20px;
+}
+
+.Social-link:hover{
+    transform: translateY(-5px);
+}
+
+.Insta:hover{
+    color: rgb(253, 95, 121);
+}
+
+.Face:hover{
+    color: rgb(54, 140, 240);
+}
+
+.Link:hover{
+    color: rgb(13, 62, 168);
+}
+
+.Twit:hover{
+    color: aquamarine;
+}

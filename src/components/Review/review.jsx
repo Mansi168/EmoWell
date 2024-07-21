@@ -57,6 +57,7 @@ const FeedbackModal = () => {
   };
 
   return (
+
     <div className="feedback-wrapper">
       <div className="feedback-form">
         <div>
@@ -66,6 +67,7 @@ const FeedbackModal = () => {
     EmoWell is here to assist with your emotional wellbeing. <br />
     Share your feedback and suggestions to help us enhance our service.
 </p>
+
 
           <div>
             <p className="rate-para">
@@ -135,6 +137,8 @@ const FeedbackModal = () => {
           </form>
         </div>
       </div>
+
+
     </div>
   );
 };
