@@ -6,6 +6,8 @@ import img2 from "../assets/image2.jpg";
 import img3 from "../assets/img-3.png";
 import img4 from "../assets/MH.avif";
 
+import  { keyframes } from 'styled-components';
+
 const Section = styled.div`
   padding: 4rem 0 2rem;
   display:flex;
@@ -59,18 +61,64 @@ const DecorationContainer = styled.div`
 
 `;
 
+const moving = keyframes`
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+`;
+
 const DecorationData = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 10px;
-  width:250px;
+  width: 250px;
   text-align: center;
   padding: 2rem;
   box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   box-sizing: border-box;
+  border: solid 1px rgba(38, 191, 71, 1);
+  position: relative;
+  overflow: hidden;
+
+  &:hover{
+  scale:1.04
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      #006400,
+      #38b000,
+      #c7f9cc,
+      #38b000,
+      #006400
+    );
+    border-radius: inherit;
+    padding: 0.3rem; /* Adjust as needed for border thickness */
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: ${moving} 3s linear infinite;
+  }
 `;
+
+
 
 const DecorationImg = styled.img`
   height: 250px;
