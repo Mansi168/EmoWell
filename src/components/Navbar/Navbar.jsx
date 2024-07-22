@@ -145,6 +145,11 @@ const Navbar = () => {
                 Review
               </NavLinks>
             </Navitem>
+            <Navitem>
+              <NavLinks to="/login" onClick={handleLogoClick} style={{border:'1px solid rgb(48,175,91)'}}>
+                Log In
+              </NavLinks>
+            </Navitem>
             {isAuthenticated ? (
             <li>
               <Dropdown>
@@ -167,8 +172,7 @@ const Navbar = () => {
             </li>
             ):(
             <li>
-              <Button onClick={() => loginWithRedirect()} style={{border:'1px solid rgb(48,175,91)'}}>
-              Register</Button>
+
             </li>
             )}
           </NavMenu>
