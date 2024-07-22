@@ -7,6 +7,7 @@ const Container = styled.div`
     //position: relative;
     height: 80vh;
     width: 100%;
+    margin-top: 10px;
 `;
 const FlexEndContainer = styled.div`
     display: flex;

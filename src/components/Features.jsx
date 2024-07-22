@@ -9,7 +9,8 @@ import img4 from "../assets/MH.avif";
 import  { keyframes } from 'styled-components';
 
 const Section = styled.div`
-  padding: 4rem 0 2rem;
+  padding: 5rem 0 2rem;
+  margin-top: 4rem;
   display:flex;
   flex-direction: column;
   justify-content: center;
