@@ -12,6 +12,7 @@ import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 import Assessment from './Pages/Assessment'
 import Services from './Pages/Services';
+
 // import Features from './components/Features'
 import FAQ from './components/FAQ';
 
