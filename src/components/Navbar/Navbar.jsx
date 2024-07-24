@@ -23,6 +23,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
+import ProgressBar from "./Progressbar";
 const Button = styled.button`
 padding: 5px 24px;
 font-style: normal;
@@ -87,11 +88,13 @@ const Navbar = () => {
 
   return (
     <>
+      
       <Nav
         style={{
           background: "#2B394A",
         }}
       >
+        
         <NavbarContainer>
           {/* <NavImg>
           <Link to="/" onClick={handleLogoClick}>
@@ -171,9 +174,13 @@ const Navbar = () => {
               Register</Button>
             </li>
             )}
+            
           </NavMenu>
+          
         </NavbarContainer>
+        
       </Nav>
+      <ProgressBar/>
     </>
   );
 };
