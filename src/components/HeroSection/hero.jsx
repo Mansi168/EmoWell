@@ -19,6 +19,7 @@ const HeroSection = () => {
         backgroundPosition: "50% 50%",
         alignItems : "center",
         fontSize: "95px",
+        
         marginBottom:"50px",
         fontWeight: "600",
         fontFamily: "Exo 2, sans-serif",
@@ -66,7 +67,7 @@ const HeroSection = () => {
                     alignItems: "center",
                     backgroundColor: "#fff",
                     width: "100%",
-                    marginTop: "100px",
+                    marginTop: "5px",
                     // height: "100vh"
                 }}>
 
