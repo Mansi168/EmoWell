@@ -24,4 +24,17 @@
     width: 100%;
     background-color: #00FF00;
   }
+
+#title{
+  margin-left: -50px;
+  @media (min-width: 786px) and (max-width: 905px) {
+    margin-left: 0;
+  }
+  @media (width: 319px) {
+    margin-left: 0;
+  }
+  @media (max-width: 319px) {
+    margin-left: 0;
+  }
+}
   

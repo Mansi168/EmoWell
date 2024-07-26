@@ -54,7 +54,7 @@ const Footer = () => {
                 <SocialLogo onClick={() => handleClick()}>EmoWell</SocialLogo>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle style={{ minWidth: "0px" }}>
+                <FooterLinkTitle id="title" style={{ minWidth: "0px"}}>
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>O</span>
                   </FooterLinkInitial>
@@ -68,9 +68,6 @@ const Footer = () => {
                         style={{
                           Height: "25px",
                           width: "25px",
-                          // position: "absolute",
-
-                          // marginLeft: "-26px"
                         }}
                         src="https://cdn.lordicon.com/surcxhka.json"
                         trigger="hover"
