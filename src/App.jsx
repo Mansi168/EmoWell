@@ -41,7 +41,6 @@ function App() {
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
-  
     {/* <Features/> */}
     </>
   )

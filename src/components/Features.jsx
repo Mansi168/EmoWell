@@ -9,7 +9,8 @@ import img4 from "../assets/MH.avif";
 import  { keyframes } from 'styled-components';
 
 const Section = styled.div`
-  padding: 4rem 0 2rem;
+  padding: 5rem 0 2rem;
+  margin-top: 4rem;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +137,7 @@ const DecorationTitle = styled.h3`
 
 const Button = styled.div`
   display: inline-block;
-  background-color: rgba(48, 175, 91);
+  background: linear-gradient(135deg, rgba(48, 175, 91, 1), rgba(34, 139, 34, 1));
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
@@ -145,9 +146,14 @@ const Button = styled.div`
   cursor: pointer;
   text-decoration: none;
   width: 150px;
+  box-shadow: 0 0 10px rgba(48, 175, 91, 0.8), 0 0 20px rgba(48, 175, 91, 0.6), 0 0 30px rgba(48, 175, 91, 0.4);
+  transform: scale(1);
+  
   &:hover {
     background-color: rgba(43, 57, 74, 0.85);
     text-decoration: none;
+    box-shadow: 0 0 15px rgba(48, 175, 91, 1), 0 0 25px rgba(48, 175, 91, 0.9), 0 0 35px rgba(48, 175, 91, 0.7);
+    transform: scale(1.05);
   }
 `;
 const DecorationDescription = styled.div`
