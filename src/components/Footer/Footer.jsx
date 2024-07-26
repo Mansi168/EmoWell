@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import logo from "../../assets/logo.png";
-import './Footer.css';
-
+import "./Footer.css";
+import EmailIcon from "@mui/icons-material/Email";
+import SendIcon from "@mui/icons-material/Send"; // Add this import
 // import { LocationOn, Phone, Mail} from '@mui/icons-material';
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -21,6 +22,7 @@ import {
 } from "./FooterElements";
 import { Height, Padding } from "@mui/icons-material";
 import { blue } from "@mui/material/colors";
+import { RiH5, RiHome3Line } from "@remixicon/react";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -50,11 +52,17 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems className="socials">
-                <FooterLogo src={logo} />{" "}
-                <SocialLogo onClick={() => handleClick()}>EmoWell</SocialLogo>
+                <FooterLogo src={logo} style={{ marginTop: "-11rem" }} />
+                <SocialLogo
+                  onClick={() => handleClick()}
+                  style={{ marginTop: "-11rem" }}
+                >
+                  EmoWell
+                </SocialLogo>
               </FooterLinkItems>
+
               <FooterLinkItems>
-                <FooterLinkTitle style={{ minWidth: "0px" }}>
+                <FooterLinkTitle id="title" style={{ minWidth: "0px"}}>
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>O</span>
                   </FooterLinkInitial>
@@ -68,9 +76,6 @@ const Footer = () => {
                         style={{
                           Height: "25px",
                           width: "25px",
-                          // position: "absolute",
-
-                          // marginLeft: "-26px"
                         }}
                         src="https://cdn.lordicon.com/surcxhka.json"
                         trigger="hover"
@@ -78,7 +83,7 @@ const Footer = () => {
                         colors="primary:#ffffff,secondary:#ffffff"
                       ></lord-icon>{" "}
                     </ListItemIcon>
-                    <ListItemText primary="ABCDEF, Rohini, ND-India" />
+                    <ListItemText primary="ABCDEF, Rohini, ND-India" className="footer-link" />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon style={{ minWidth: "0px" }}>
@@ -93,8 +98,16 @@ const Footer = () => {
                         colors="primary:#ffffff"
                       ></lord-icon>{" "}
                     </ListItemIcon>
-                    <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
+
+                    <a
+                      href="tel:+01234567890"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <ListItemText primary="+012 345 67890" />
+
+                    <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <ListItemText primary="+012 345 67890" className="footer-link"/>
+
                     </a>
                   </ListItem>
                   <ListItem>
@@ -110,8 +123,16 @@ const Footer = () => {
                         colors="primary:#ffffff"
                       ></lord-icon>{" "}
                     </ListItemIcon>
-                    <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+
+                    <a
+                      href="mailto:abcdef@gmail.com"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <ListItemText primary="abcdef@gmail.com" />
+
+                    <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
+
                     </a>
                   </ListItem>
                 </FooterLinkItems>
@@ -191,6 +212,7 @@ const Footer = () => {
                 </FooterLinkTitle>
                 <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
+
                     <ListItemText primary="Monday - Friday : 9am - 5pm" />
                   </ListItem>
                   <ListItem>
@@ -198,13 +220,60 @@ const Footer = () => {
                   </ListItem>
                   <ListItem>
                     <ListItemText primary="Sunday : Closed" />
+
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterLinksContainer>
 
-          <WebsiteRights>
+          <div
+            className="container"
+            style={{ display: "inline-block", marginTop: "-15rem" }}
+          >
+            <h5 style={{ color: "white", marginLeft: "0rem",fontWeight:"bold" }}> Email Us</h5>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "25rem",
+                marginBottom: "28px",
+              }}
+            >
+              <input
+                type="text"
+                id="message-input"
+                placeholder="Type your message here"
+                style={{
+                  padding: "3px",
+                  marginLeft: "-25rem",
+                  height: "2rem",
+                  fontSize: "15px",
+                  borderRadius: "8px",
+                  borderColor: "#00FF00", 
+                  borderWidth: "3px", 
+                  borderStyle: "solid"
+                }}
+              />
+              <a
+                href="mailto:abc@gmail.com"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <SendIcon
+                  style={{
+                    fontSize: "35px",
+                    color: "#00FF00",
+                    width: "30px",
+                    padding: "3px",
+                    cursor: "pointer",
+                    marginBottom: "-1px",
+                  }}
+                />
+              </a>
+            </div>
+          </div>
+
+          <WebsiteRights style={{ marginTop: "13rem" }}>
             EmoWell © {new Date().getFullYear()}&nbsp;All rights reserved.
           </WebsiteRights>
         </FooterWrap>

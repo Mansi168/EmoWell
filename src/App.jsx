@@ -12,6 +12,7 @@ import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 import Assessment from './Pages/Assessment'
 import Services from './Pages/Services';
+import LoginPage from './Pages/Login';
 // import Features from './components/Features'
 import FAQ from './components/FAQ';
 
@@ -31,6 +32,7 @@ function App() {
     <Route path="/forum" element={<ChatComponent />} />
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
+    <Route path='/login' element={<LoginPage/>} />
     <Route path='/assessment' element={<Assessment/>} />
       <Route path='/services' element={<Services />} />
     <Route path='/privacy' element={<Privacy/>}/>
@@ -39,7 +41,6 @@ function App() {
     <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
-  
     {/* <Features/> */}
     </>
   )
