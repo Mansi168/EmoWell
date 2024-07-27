@@ -5,6 +5,10 @@
     align-items: center;
     background-size: cover;
     padding: 2rem;
+    [data-aos^=fade][data-aos^=fade] {
+        opacity: 1!important;
+        transition-property: opacity, transform;
+    }
 }
 
 .contact-container {

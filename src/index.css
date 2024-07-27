@@ -213,3 +213,8 @@ input{
   height: 100%;
   background-color: rgb(42, 227, 104); 
 }
+
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 1!important;
+  transition-property: opacity, transform;
+}
