@@ -8,7 +8,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
 
-import { useNavigate } from "react-router";
 import ProgressBar from "./Progressbar";
 
 
@@ -63,9 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
-
-      
+      <>
       <Nav
         style={{
           background: "#2B394A",
@@ -91,7 +88,7 @@ const Navbar = () => {
           </MobileIcon>
 
           <NavMenu isOpen={isOpen}>
-            )}
+          
             
           </NavMenu>
           
@@ -99,8 +96,12 @@ const Navbar = () => {
         
       </Nav>
       <ProgressBar/>
+    
+    </Nav>
+      <ProgressBar/>
     </>
   );
 };
+
 
 export default Navbar;

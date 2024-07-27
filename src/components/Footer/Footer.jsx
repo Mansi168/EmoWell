@@ -104,7 +104,7 @@ const Footer = () => {
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       <ListItemText primary="+012 345 67890" />
-
+                    </a>
                     <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="+012 345 67890" className="footer-link"/>
 
@@ -128,8 +128,9 @@ const Footer = () => {
                       href="mailto:abcdef@gmail.com"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
-                      <ListItemText primary="abcdef@gmail.com" />
 
+                      <ListItemText primary="abcdef@gmail.com" />
+                    </a>
                     <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
 
