@@ -18,32 +18,46 @@ import FAQ from './components/FAQ';
 
 import RouteNotFound from './Pages/RouteNotFound';
 import CommunityPage from "./components/community/CommunityPage";
+import { useEffect, useState } from "react";
+import Preloader from "./components/Preloader/Preloader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-  <Router>
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/contact" element={<ContactPage />} />
-    <Route path="/review" element={<ReviewPage />} />
-    <Route path="/forum" element={<ChatComponent />} />
-    <Route path='/readingarea' element={<ReadingArea/>} />
-    <Route path='/games' element={<Games/>} />
-    <Route path='/login' element={<LoginPage/>} />
-    <Route path='/assessment' element={<Assessment/>} />
-      <Route path='/services' element={<Services />} />
-    <Route path='/privacy' element={<Privacy/>}/>
-    <Route path='/faq' element={<FAQ/>}/>
-    <Route path="/community" element={<CommunityPage/>}/>
-    <Route path='*' element={<RouteNotFound/>}/>
-    </Routes>
-    </Router>
-    {/* <Features/> */}
+    {loading ? (
+      <Preloader />
+    ) : (
+      <Router>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/review" element={<ReviewPage />} />
+      <Route path="/forum" element={<ChatComponent />} />
+      <Route path='/readingarea' element={<ReadingArea/>} />
+      <Route path='/games' element={<Games/>} />
+      <Route path='/login' element={<LoginPage/>} />
+      <Route path='/assessment' element={<Assessment/>} />
+        <Route path='/services' element={<Services />} />
+      <Route path='/privacy' element={<Privacy/>}/>
+      <Route path='/faq' element={<FAQ/>}/>
+      <Route path="/community" element={<CommunityPage/>}/>
+      <Route path='*' element={<RouteNotFound/>}/>
+      {/* <Features/> */}
+      </Routes>
+      </Router>
+    )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
