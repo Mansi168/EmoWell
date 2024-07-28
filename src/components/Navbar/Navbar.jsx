@@ -43,6 +43,7 @@ const Navbar = () => {
   };
 
   const handleLogoClick = () => {
+    setIsOpen(!isOpen);
     window.scrollTo(0, 0);
   };
 
@@ -57,6 +58,7 @@ const Navbar = () => {
 
   const handleNavClick = (path, sectionId) => {
     navigate(path);
+    setIsOpen(false);
     setTimeout(() => {
       scrollToSection(sectionId);
     }, 100);
