@@ -8,6 +8,16 @@
 .card{
     margin-right:20px;
     border-radius:12px;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: -webkit-auto !important;
+}
+.card-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    margin-top:10px;
 }
 .heading{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
