@@ -213,13 +213,15 @@ const Footer = () => {
                 </FooterLinkTitle>
                 <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
-                    <ListItemText primary="Monday - Friday" className="footer-link" />
+
+                    <ListItemText primary="Monday - Friday : 9am - 5pm" />
                   </ListItem>
                   <ListItem>
-                    <ListItemText primary="Saturday" className="footer-link" />
+                    <ListItemText primary="Saturday : 9am - 12pm" />
                   </ListItem>
                   <ListItem>
-                    <ListItemText primary="Sunday" className="footer-link"/>
+                    <ListItemText primary="Sunday : Closed" />
+
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
