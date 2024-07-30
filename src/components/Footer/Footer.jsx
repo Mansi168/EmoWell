@@ -274,7 +274,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <WebsiteRights style={{ marginTop: "13rem" }}>
+          <WebsiteRights style={{ marginTop: "3rem" }}>
             EmoWell © {new Date().getFullYear()}&nbsp;All rights reserved.
           </WebsiteRights>
         </FooterWrap>
