@@ -128,12 +128,10 @@ const Footer = () => {
                       href="mailto:abcdef@gmail.com"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
-
                       <ListItemText primary="abcdef@gmail.com" />
                     </a>
                     <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
-
                     </a>
                   </ListItem>
                 </FooterLinkItems>
@@ -144,7 +142,7 @@ const Footer = () => {
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>Q</span>
                   </FooterLinkInitial>
-                  uick Links
+                  Quick Links
                 </FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
@@ -209,7 +207,7 @@ const Footer = () => {
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>B</span>
                   </FooterLinkInitial>
-                  usiness Hours
+                  Business Hours
                 </FooterLinkTitle>
                 <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
