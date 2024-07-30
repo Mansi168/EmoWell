@@ -92,13 +92,13 @@ export const NavLinks = styled(LinkR)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 1.5px 15px;
+  padding: 0 15px;
   height: auto;
   cursor: pointer;
   border: 1px solid #05f8cb;
   border-radius: 30px;
   margin: 0 10px; /* Adds space between the nav links */
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   &:hover {
     background: rgb(48, 175, 91);
