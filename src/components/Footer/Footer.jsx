@@ -142,7 +142,7 @@ const Footer = () => {
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>Q</span>
                   </FooterLinkInitial>
-                  Quick Links
+                  uick Links
                 </FooterLinkTitle>
                 <FooterLinkItems>
                   <ListItem>
@@ -207,7 +207,7 @@ const Footer = () => {
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>B</span>
                   </FooterLinkInitial>
-                  Business Hours
+                  usiness Hours
                 </FooterLinkTitle>
                 <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
