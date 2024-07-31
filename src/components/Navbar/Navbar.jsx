@@ -136,7 +136,6 @@ const Navbar = () => {
           </NavMenu>
         </NavbarContainer>
       </Nav>
-      <ProgressBar />
     </>
   );
 };
