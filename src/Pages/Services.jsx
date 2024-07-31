@@ -59,18 +59,18 @@ const Services = () => {
     <>
       <Navbar />
       <div className="">
-        <h1 className="text-center mt-5 display-3 fw-bold">Our <span className="theme-text">Services</span></h1>
+        <h1 className="heading">Our <span className="theme-text">Services</span></h1>
         <hr className="mx-auto mb-5 w-25 " />
 
-        <section className={"m-0 p-0 w-100 d-flex flex-wrap gap-2"} >
+        <section className={"m-0 p-0 w-100 d-flex flex-wrap gap-2 margin: 0 auto"} >
 
           {
             serviceData.map((data,index)=>{
               return (
                   <>
                     <div className={"card border border-success bg-white"}
-                         style={{maxWidth: "400px", minHeight: "500px", cursor: "default"}}>
-                      <div className={"card-body d-flex flex-column justify-content-start w-100 p-0 m-0"}>
+                         style={{maxWidth: "400px", minHeight: "500px", cursor: "default" ,margin: "0 auto"}}>
+                      <div className={"card-body d-flex flex-column justify-content-start w-100 p-0 m-0" }>
                         <h3 className={"m-0 mb-4 fw-bold"}>{data.name}</h3>
                         <div className={"rounded"} style={{width: "100%", height: "200px", overflow: "hidden"}}>
                           <img src={data.image} alt="WhatsApp" className="w-100 h-100"
