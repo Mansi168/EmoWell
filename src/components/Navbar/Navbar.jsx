@@ -127,7 +127,10 @@ const Navbar = () => {
         </NavbarContainer>
         
       </Nav>
-      {/* <ProgressBar/> */}
+            <ProgressBar/>
+
+    </Nav>
+      <ProgressBar/>
     </>
   );
 };
