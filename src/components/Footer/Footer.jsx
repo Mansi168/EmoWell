@@ -128,12 +128,10 @@ const Footer = () => {
                       href="mailto:abcdef@gmail.com"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
-
                       <ListItemText primary="abcdef@gmail.com" />
                     </a>
                     <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
-
                     </a>
                   </ListItem>
                 </FooterLinkItems>
