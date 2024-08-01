@@ -52,17 +52,17 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems className="socials">
-                <FooterLogo src={logo} style={{ marginTop: "-11rem" }} />
+                <FooterLogo src={logo} style={{ marginTop: "-10rem" }} />
                 <SocialLogo
                   onClick={() => handleClick()}
-                  style={{ marginTop: "-11rem" }}
+                  style={{ marginTop: "-10rem" }}
                 >
                   EmoWell
                 </SocialLogo>
               </FooterLinkItems>
 
               <FooterLinkItems>
-                <FooterLinkTitle id="title" style={{ minWidth: "0px"}}>
+                <FooterLinkTitle id="title" style={{ minWidth: "0px" }}>
                   <FooterLinkInitial>
                     <span style={{ fontSize: "38px" }}>O</span>
                   </FooterLinkInitial>
@@ -83,7 +83,10 @@ const Footer = () => {
                         colors="primary:#ffffff,secondary:#ffffff"
                       ></lord-icon>{" "}
                     </ListItemIcon>
-                    <ListItemText primary="ABCDEF, Rohini, ND-India" className="footer-link" />
+                    <ListItemText
+                      primary="ABCDEF, Rohini, ND-India"
+                      className="footer-link"
+                    />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon style={{ minWidth: "0px" }}>
@@ -105,9 +108,14 @@ const Footer = () => {
                     >
                       <ListItemText primary="+012 345 67890" />
                     </a>
-                    <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <ListItemText primary="+012 345 67890" className="footer-link"/>
-
+                    <a
+                      href="tel:+01234567890"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <ListItemText
+                        primary="+012 345 67890"
+                        className="footer-link"
+                      />
                     </a>
                   </ListItem>
                   <ListItem>
@@ -128,12 +136,16 @@ const Footer = () => {
                       href="mailto:abcdef@gmail.com"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
-
                       <ListItemText primary="abcdef@gmail.com" />
                     </a>
-                    <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
-
+                    <a
+                      href="mailto:abcdef@gmail.com"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <ListItemText
+                        primary="abcdef@gmail.com"
+                        className="footer-link"
+                      />
                     </a>
                   </ListItem>
                 </FooterLinkItems>
@@ -213,7 +225,6 @@ const Footer = () => {
                 </FooterLinkTitle>
                 <FooterLinkItems style={{ marginRight: "50px" }}>
                   <ListItem>
-
                     <ListItemText primary="Monday - Friday : 9am - 5pm" />
                   </ListItem>
                   <ListItem>
@@ -221,18 +232,19 @@ const Footer = () => {
                   </ListItem>
                   <ListItem>
                     <ListItemText primary="Sunday : Closed" />
-
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterLinksContainer>
 
-          <div
-            className="container"
-            style={{ display: "inline-block", marginTop: "-15rem" }}
-          >
-            <h5 style={{ color: "white", marginLeft: "0rem",fontWeight:"bold" }}> Email Us</h5>
+          <div className="email-us">
+            <h5
+              style={{ color: "white", marginLeft: "0rem", fontWeight: "bold" }}
+            >
+              {" "}
+              Email Us
+            </h5>
             <div
               style={{
                 display: "flex",
@@ -251,9 +263,9 @@ const Footer = () => {
                   height: "2rem",
                   fontSize: "15px",
                   borderRadius: "8px",
-                  borderColor: "#00FF00", 
-                  borderWidth: "3px", 
-                  borderStyle: "solid"
+                  borderColor: "#00FF00",
+                  borderWidth: "3px",
+                  borderStyle: "solid",
                 }}
               />
               <a

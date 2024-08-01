@@ -26,7 +26,7 @@
   }
 
 #title{
-  margin-left: -50px;
+  margin-left: -120px;
   @media (min-width: 786px) and (max-width: 905px) {
     margin-left: 0;
   }
@@ -35,6 +35,26 @@
   }
   @media (max-width: 319px) {
     margin-left: 0;
+  }
+}
+
+
+@media (min-width:769px) {
+  .email-us{
+    display: block;
+    position: absolute;
+    left:5rem;
+    top: 10rem;
+  }
+}
+
+
+@media (max-width:769px) {
+  .email-us{
+    display: block;
+    position: absolute;
+    left:5rem;
+    top: 2rem;
   }
 }
   
