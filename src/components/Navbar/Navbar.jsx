@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; 
 import { Nav, NavbarContainer, NavImg, NavMenu, NavItem, NavLinks, MobileIcon, NavLogo, SubLogo, Dropdown, DropdownContent, ButtonDropdown } from "./NavbarElements";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,8 +9,6 @@ import logo from "../../assets/logo.png";
 import styled from "styled-components";
 
 import ProgressBar from "./Progressbar";
-
-
 
 const Button = styled.button`
   padding: 5px 24px;
@@ -42,7 +40,7 @@ const Navbar = () => {
   };
 
   const handleLogoClick = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(false);
     window.scrollTo(0, 0);
   };
 
@@ -64,16 +62,8 @@ const Navbar = () => {
   };
 
   return (
-      <>
-      <Nav
-        style={{
-          background: "#2B394A",
-        }}
-      >
-        
-
-      <Nav>
-
+    <>
+      <Nav style={{ background: "#2B394A" }}>
         <NavbarContainer>
           <NavImg>
             <Link to="/" onClick={handleLogoClick}>
@@ -90,20 +80,65 @@ const Navbar = () => {
           </MobileIcon>
 
           <NavMenu isOpen={isOpen}>
-          
-            
+            <NavItem>
+              <NavLinks to="/" onClick={handleLogoClick}>
+                Home
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/#about" onClick={() => handleNavClick('/', 'about')}>
+                About
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/#Features" onClick={() => handleNavClick('/', 'featureSection')}>
+                Features
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/contact" onClick={handleLogoClick}>
+                Contact
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/review" onClick={handleLogoClick}>
+                Review
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/login" onClick={handleLogoClick} style={{ border: '1px solid rgb(48,175,91)' }}>
+                Log In
+              </NavLinks>
+            </NavItem>
+            {isAuthenticated && (
+              <NavItem>
+                <Dropdown>
+                  <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
+                  <ButtonDropdown onClick={toggleDropdown}>
+                    Account
+                    <FontAwesomeIcon icon={faCaretDown} style={{ color: '#fff' }} />
+                  </ButtonDropdown>
+                  {isOpen && (
+                    <DropdownContent>
+                      <Link to="/profile">User Profile</Link>
+                      <Button
+                        onClick={() =>
+                          logout({ logoutParams: { returnTo: window.location.origin } })
+                        }
+                      >
+                        Log Out
+                      </Button>
+                    </DropdownContent>
+                  )}
+                </Dropdown>
+              </NavItem>
+            )}
           </NavMenu>
-          
         </NavbarContainer>
-        
       </Nav>
-      <ProgressBar/>
-    
-    </Nav>
-      <ProgressBar/>
     </>
   );
 };
 
-
 export default Navbar;
+
