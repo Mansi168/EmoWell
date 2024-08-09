@@ -103,7 +103,6 @@ const Footer = () => {
                       href="tel:+01234567890"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
-                      <ListItemText primary="+012 345 67890" />
                     </a>
                     <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="+012 345 67890" className="footer-link"/>
@@ -129,7 +128,6 @@ const Footer = () => {
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
 
-                      <ListItemText primary="abcdef@gmail.com" />
                     </a>
                     <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                       <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
@@ -230,7 +228,7 @@ const Footer = () => {
 
           <div
             className="container"
-            style={{ display: "inline-block", marginTop: "-15rem" }}
+            style={{ display: "inline-block", marginTop: "-15rem"  , width: "90%" }}
           >
             <h5 style={{ color: "white", marginLeft: "0rem",fontWeight:"bold" }}> Email Us</h5>
             <div
@@ -247,6 +245,7 @@ const Footer = () => {
                 placeholder="Type your message here"
                 style={{
                   padding: "3px",
+                  width: "auto",
                   marginLeft: "-25rem",
                   height: "2rem",
                   fontSize: "15px",
@@ -274,7 +273,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <WebsiteRights style={{ marginTop: "13rem" }}>
+          <WebsiteRights style={{ marginTop: "3rem" }}>
             EmoWell © {new Date().getFullYear()}&nbsp;All rights reserved.
           </WebsiteRights>
         </FooterWrap>

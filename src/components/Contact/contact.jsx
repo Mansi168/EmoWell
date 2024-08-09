@@ -50,11 +50,11 @@ const Contact = () => {
 
   return (
     <section>
+      <div className='contact-heading'>
+        <h1 className='contact-title'>Contact Us</h1>
+      </div>
       <div className="contact-container" data-aos="fade down">
         <div className="contactInfo">
-          <div>
-            {/* Contact info section */}
-          </div>
         </div>
         <div className="contactForm">
           <h2>Send a Message</h2>

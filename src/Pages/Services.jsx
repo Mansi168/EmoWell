@@ -69,8 +69,6 @@ const Services = () => {
               return (
                   <>
                     <div className={"card border border-success bg-white"}
-                         style={{maxWidth: "400px", minHeight: "500px", cursor: "default" ,margin: "0 auto"}}>
-                      <div className={"card-body d-flex flex-column justify-content-start w-100 p-0 m-0" }>
                         <h3 className={"m-0 mb-4 fw-bold"}>{data.name}</h3>
                         <div className={"rounded"} style={{width: "100%", height: "200px", overflow: "hidden"}}>
                           <img src={data.image} alt="WhatsApp" className="w-100 h-100"
