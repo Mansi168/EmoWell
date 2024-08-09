@@ -19,10 +19,8 @@ import {
   WebsiteRights,
   Footerbg,
   FooterLinkInitial,
+  SocialMediaWrap,
 } from "./FooterElements";
-import { Height, Padding } from "@mui/icons-material";
-import { blue } from "@mui/material/colors";
-import { RiH5, RiHome3Line } from "@remixicon/react";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -71,28 +69,23 @@ const Footer = () => {
                 <FooterLinkItems>
                   <ListItem>
                     <ListItemIcon style={{ minWidth: "0px" }}>
-                      {/* <LocationOn style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
                       <lord-icon
-                        style={{
-                          Height: "25px",
-                          width: "25px",
-                        }}
+                        style={{ height: "25px", width: "25px" }}
                         src="https://cdn.lordicon.com/surcxhka.json"
                         trigger="hover"
                         stroke="bold"
                         colors="primary:#ffffff,secondary:#ffffff"
                       ></lord-icon>{" "}
                     </ListItemIcon>
-                    <ListItemText primary="ABCDEF, Rohini, ND-India" className="footer-link" />
+                    <ListItemText
+                      primary="ABCDEF, Rohini, ND-India"
+                      className="footer-link"
+                    />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon style={{ minWidth: "0px" }}>
-                      {/* <Phone style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
                       <lord-icon
-                        style={{
-                          Height: "25px",
-                          width: "25px",
-                        }}
+                        style={{ height: "25px", width: "25px" }}
                         src="https://cdn.lordicon.com/srsgifqc.json"
                         trigger="hover"
                         colors="primary:#ffffff"
@@ -104,19 +97,20 @@ const Footer = () => {
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                     </a>
-                    <a href="tel:+01234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <ListItemText primary="+012 345 67890" className="footer-link"/>
-
+                    <a
+                      href="tel:+01234567890"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <ListItemText
+                        primary="+012 345 67890"
+                        className="footer-link"
+                      />
                     </a>
                   </ListItem>
                   <ListItem>
                     <ListItemIcon style={{ minWidth: "0px" }}>
-                      {/* <Mail style={{ marginRight: '0.5rem',color:' #FDA5A4' }} /> */}
                       <lord-icon
-                        style={{
-                          Height: "25px",
-                          width: "25px",
-                        }}
+                        style={{ height: "25px", width: "25px" }}
                         src="https://cdn.lordicon.com/xtzvywzp.json"
                         trigger="hover"
                         colors="primary:#ffffff"
@@ -129,9 +123,14 @@ const Footer = () => {
                     >
 
                     </a>
-                    <a href="mailto:abcdef@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <ListItemText primary="abcdef@gmail.com" className="footer-link"/>
-
+                    <a
+                      href="mailto:abcdef@gmail.com"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <ListItemText
+                        primary="abcdef@gmail.com"
+                        className="footer-link"
+                      />
                     </a>
                   </ListItem>
                 </FooterLinkItems>
@@ -209,9 +208,8 @@ const Footer = () => {
                   </FooterLinkInitial>
                   usiness Hours
                 </FooterLinkTitle>
-                <FooterLinkItems style={{ marginRight: "50px" }}>
+                <FooterLinkItems style={{ marginRight: "10px" }}>
                   <ListItem>
-
                     <ListItemText primary="Monday - Friday : 9am - 5pm" />
                   </ListItem>
                   <ListItem>
@@ -219,7 +217,6 @@ const Footer = () => {
                   </ListItem>
                   <ListItem>
                     <ListItemText primary="Sunday : Closed" />
-
                   </ListItem>
                 </FooterLinkItems>
               </FooterLinkItems>
@@ -227,15 +224,14 @@ const Footer = () => {
           </FooterLinksContainer>
 
           <div
-            className="container"
-            style={{ display: "inline-block", marginTop: "-15rem"  , width: "90%" }}
+
           >
             <h5 style={{ color: "white", marginLeft: "0rem",fontWeight:"bold" }}> Email Us</h5>
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                marginLeft: "25rem",
+                justifyContent: "center",
                 marginBottom: "28px",
               }}
             >
@@ -245,8 +241,7 @@ const Footer = () => {
                 placeholder="Type your message here"
                 style={{
                   padding: "3px",
-                  width: "auto",
-                  marginLeft: "-25rem",
+
                   height: "2rem",
                   fontSize: "15px",
                   borderRadius: "8px",
@@ -257,7 +252,7 @@ const Footer = () => {
               />
               <a
                 href="mailto:abc@gmail.com"
-                style={{ display: "flex", alignItems: "center" }}
+                style={{ display: "flex", alignItems: "center", marginLeft: "0.5rem" }}
               >
                 <SendIcon
                   style={{
@@ -266,15 +261,12 @@ const Footer = () => {
                     width: "30px",
                     padding: "3px",
                     cursor: "pointer",
-                    marginBottom: "-1px",
                   }}
                 />
               </a>
             </div>
           </div>
 
-          <WebsiteRights style={{ marginTop: "3rem" }}>
-            EmoWell © {new Date().getFullYear()}&nbsp;All rights reserved.
           </WebsiteRights>
         </FooterWrap>
       </FooterContainer>
