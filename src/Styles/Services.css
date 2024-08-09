@@ -2,6 +2,8 @@
 /*Pixel font*/
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -101,4 +103,22 @@
 
 .btn-primary:hover {
   background-color: #0056b3;
+}
+
+.heading{
+  text-align: center ;
+  margin-top: 20px ;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  background: linear-gradient(rgb(43, 57, 74) ,rgb(48, 175, 91));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  ;}
+
+.theme-text{
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
 }
