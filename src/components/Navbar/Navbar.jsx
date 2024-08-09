@@ -7,8 +7,8 @@ import { faCaretDown, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
-
 import ProgressBar from "./Progressbar";
+
 
 const Button = styled.button`
   padding: 5px 24px;
@@ -47,15 +47,12 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = -120; // Adjust this value as needed
-      const yPosition = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleNavClick = (path, sectionId) => {
     navigate(path);
-    setIsOpen(false);
     setTimeout(() => {
       scrollToSection(sectionId);
     }, 100);
@@ -105,12 +102,7 @@ const Navbar = () => {
                 Review
               </NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="/login" onClick={handleLogoClick} style={{ border: '1px solid rgb(48,175,91)' }}>
-                Log In
-              </NavLinks>
-            </NavItem>
-            {isAuthenticated && (
+            {isAuthenticated ? (
               <NavItem>
                 <Dropdown>
                   <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
@@ -132,6 +124,12 @@ const Navbar = () => {
                   )}
                 </Dropdown>
               </NavItem>
+            ) : (
+              <NavItem>
+                <Button onClick={() => loginWithRedirect()} style={{ border: '1px solid rgb(48,175,91)' }}>
+                  Register
+                </Button>
+              </NavItem>
             )}
           </NavMenu>
         </NavbarContainer>
@@ -141,4 +139,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
