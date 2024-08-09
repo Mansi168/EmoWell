@@ -230,7 +230,7 @@ const Footer = () => {
 
           <div
             className="container"
-            style={{ display: "inline-block", marginTop: "-15rem" }}
+            style={{ display: "inline-block", marginTop: "-15rem"  , width: "90%" }}
           >
             <h5 style={{ color: "white", marginLeft: "0rem",fontWeight:"bold" }}> Email Us</h5>
             <div
@@ -247,6 +247,7 @@ const Footer = () => {
                 placeholder="Type your message here"
                 style={{
                   padding: "3px",
+                  width: "auto",
                   marginLeft: "-25rem",
                   height: "2rem",
                   fontSize: "15px",
