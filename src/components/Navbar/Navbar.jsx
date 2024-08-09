@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; 
 import { Nav, NavbarContainer, NavImg, NavMenu, NavItem, NavLinks, MobileIcon, NavLogo, SubLogo, Dropdown, DropdownContent, ButtonDropdown } from "./NavbarElements";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,8 @@ import { faCaretDown, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../assets/logo.png";
 import styled from "styled-components";
+import ProgressBar from "./Progressbar";
+
 
 const Button = styled.button`
   padding: 5px 24px;
@@ -38,6 +40,7 @@ const Navbar = () => {
   };
 
   const handleLogoClick = () => {
+    setIsOpen(false);
     window.scrollTo(0, 0);
   };
 
@@ -57,7 +60,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Nav>
+      <Nav style={{ background: "#2B394A" }}>
         <NavbarContainer>
           <NavImg>
             <Link to="/" onClick={handleLogoClick}>
@@ -75,43 +78,58 @@ const Navbar = () => {
 
           <NavMenu isOpen={isOpen}>
             <NavItem>
-              <NavLinks to="/" onClick={handleLogoClick}>Home</NavLinks>
+              <NavLinks to="/" onClick={handleLogoClick}>
+                Home
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/#about" onClick={() => handleNavClick('/', 'about')}>About</NavLinks>
+              <NavLinks to="/#about" onClick={() => handleNavClick('/', 'about')}>
+                About
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/#Features" onClick={() => handleNavClick('/', 'featureSection')}>Features</NavLinks>
+              <NavLinks to="/#Features" onClick={() => handleNavClick('/', 'featureSection')}>
+                Features
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/contact" onClick={handleLogoClick}>Contact</NavLinks>
+              <NavLinks to="/contact" onClick={handleLogoClick}>
+                Contact
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/review" onClick={handleLogoClick}>Review</NavLinks>
+              <NavLinks to="/review" onClick={handleLogoClick}>
+                Review
+              </NavLinks>
             </NavItem>
             {isAuthenticated ? (
-              <li>
+              <NavItem>
                 <Dropdown>
                   <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
-                  <ButtonDropdown onClick={toggleDropdown}>Account
+                  <ButtonDropdown onClick={toggleDropdown}>
+                    Account
                     <FontAwesomeIcon icon={faCaretDown} style={{ color: '#fff' }} />
                   </ButtonDropdown>
                   {isOpen && (
                     <DropdownContent>
-                      <a href="/profile">User Profile</a>
-                      <button onClick={() => logout({ returnTo: window.location.origin })} style={{ fontSize: '16px', fontWeight: '600' }}>
+                      <Link to="/profile">User Profile</Link>
+                      <Button
+                        onClick={() =>
+                          logout({ logoutParams: { returnTo: window.location.origin } })
+                        }
+                      >
                         Log Out
-                      </button>
+                      </Button>
                     </DropdownContent>
                   )}
                 </Dropdown>
-              </li>
+              </NavItem>
             ) : (
-              <li>
+              <NavItem>
                 <Button onClick={() => loginWithRedirect()} style={{ border: '1px solid rgb(48,175,91)' }}>
                   Register
                 </Button>
-              </li>
+              </NavItem>
             )}
           </NavMenu>
         </NavbarContainer>
