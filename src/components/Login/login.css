@@ -1,4 +1,6 @@
+/* Import fonts and basic styles */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@ body {
   margin: 0;
   position: relative;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -53,6 +56,7 @@ body {
   font-size: 12px;
   color: black;
 }
+
 .container a {
   color: #333;
   font-size: 13px;
@@ -73,10 +77,12 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
+
 .container button.hidden {
   background-color: transparent;
   border-color: #fff;
 }
+
 .container form {
   background-color: #fff;
   display: flex;
@@ -97,6 +103,7 @@ body {
   width: 100%;
   outline: none;
 }
+
 .container h1 {
   color: black;
 }
@@ -107,15 +114,16 @@ body {
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
+
 .sign-in {
   left: 0;
   width: 50%;
   z-index: 2;
 }
+
 .container.active .sign-in {
   transform: translateX(100%);
 }
-
 
 @keyframes move {
   0%,
@@ -133,6 +141,7 @@ body {
 .social-icons {
   margin: 20px 0;
 }
+
 .social-icons a {
   border: 1px solid #ccc;
   border-radius: 20%;
@@ -143,6 +152,7 @@ body {
   width: 40px;
   height: 40px;
 }
+
 .social-icons a:hover {
   font-size: 25px;
   background-color: rgb(48, 175, 91);
@@ -158,13 +168,13 @@ body {
   overflow: hidden;
   transition: all 0.6s ease-in-out;
   border-radius: 150px 0 0 100px;
- 
 }
 
 .container.active .toggle-container {
   transform: translateX(-100%);
   border-radius: 0px 150px 100px 0px;
 }
+
 .toggle {
   height: 100%;
   background: linear-gradient(to right, #020559, rgb(48, 175, 91));
@@ -176,9 +186,11 @@ body {
   transform: translateX(0);
   transition: all 0.6s ease-in-out;
 }
+
 .container.active .toggle {
   transform: translateX(50%);
 }
+
 .toggle-panel {
   position: absolute;
   width: 50%;
@@ -193,6 +205,7 @@ body {
   transform: translateX(0);
   transition: all 0.6s ease-in-out;
 }
+
 .toggle-right {
   right: 0;
   transform: translateX(0);
@@ -201,6 +214,59 @@ body {
 .input-password {
   display: flex;
   width: 100%;
-  /* align-items: center; */
+}
 
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .form-container,
+  .toggle-container {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+    transform: translateX(0);
+  }
+
+  .toggle-container {
+    order: 1;
+  }
+
+  .form-container {
+    order: 2;
+  }
+
+  .toggle,
+  .toggle-panel {
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  .toggle-panel {
+    padding: 20px;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container input,
+  .container button {
+    width: 100%;
+  }
+
+  .input-password {
+    flex-direction: column;
+  }
+
+  .input-password button {
+    margin-top: 10px;
+  }
 }

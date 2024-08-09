@@ -1,59 +1,121 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-section{
-    font-family: sans-serif;
-    height: fit-content;
+.section {
+    font-family: 'Arial', sans-serif;
     display: block;
-    margin: 2.5rem 10rem;
+    margin: 2.5rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    background: linear-gradient(135deg, #f9f9f9 50%, #bcfcdf 50%);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-section .heading{
-    margin: 5rem;
+section .heading {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-section .title h1{
-    font-weight: bolder;
+section .title h1 {
+    font-size: 2.5rem;
+    color: rgb(48, 71, 175);
+    font-weight: 780;
+    transition: color 0.3s, transform 0.3s;
 }
 
-section .context p{
-    font-size: 1.05rem;
-    text-align: justify;
+section .title h1:hover {
+    color: #30AF5B;
+    transform: scale(1.05);
 }
 
-section .policy div{
-    margin: 2.5rem 0rem;
+section .context p {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8;
+    color: rgb(48, 71, 175);
+    font-style: italic;
+
 }
 
-section .policy h2{
-    font-weight: bolder;
+section .policy {
+    margin-top: 2rem;
 }
 
-section .policy p{
-    font-weight: thin;
+.policy-item {
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.link{
-    font-weight: bold;
-    color: rgb(48, 175, 91);
+.policy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+section .policy h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
 
+section .policy p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 0.5rem 0;
+
+}
+
+.link {
+    font-weight: 700;
+    color: #30AF5B;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.link:hover {
+    color: #1d8a40;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-div {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card-div:hover {
+    background-color: #3cb765;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(55, 221, 166, 0.2);
+}
+.text-center{
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 800;
+}
 /* Media queries for responsiveness */
 @media screen and (max-width: 1200px) {
     section {
-        margin: 2.5rem 5rem; /* Adjust margin for smaller screens */
+        padding: 0 2rem; /* Adjust padding for smaller screens */
     }
 }
 
 @media screen and (max-width: 768px) {
     section {
-        margin: 2.5rem 2rem; /* Adjust margin for even smaller screens */
+        padding: 0 1rem; /* Further adjust padding for smaller screens */
     }
-    section .heading{
-        margin: 1rem;
+    section .heading {
+        margin: 2rem 0;
+    }
+    section .title h1 {
+        font-size: 2rem;
+    }
+    section .policy h2 {
+        font-size: 1.4rem;
+    }
+    section .policy p {
+        font-size: 0.9rem;
     }
 }
