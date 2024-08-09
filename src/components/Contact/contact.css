@@ -10,6 +10,14 @@
         transition-property: opacity, transform;
     }
 }
+.contact-heading{
+    color: rgb(85 253 150);
+    text-align: center;
+}
+.contact-title{
+    font-size: 3rem;
+    font-weight: 500;
+}
 
 .contact-container {
     position: relative;
@@ -148,6 +156,4 @@
     .contact-container{
         margin-top: 0px;
     }
-   
-
 }
